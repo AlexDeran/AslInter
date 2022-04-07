@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/drawable/rectangle.xml" value="0.1885" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/actionbarmain.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_congugaison.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_conjugaisonmenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_expps2.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_expps3.xml" value="0.12682291666666667" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_fc.xml" value="0.1" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_lecon.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_leconmenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_main.xml" value="0.128" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_pps.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_ppsmenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_voc.xml" value="0.1" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1245" />
+        <entry key="..\:/Users/lenov/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_capitals.xml" value="0.1" />
+        <entry key="..\:/Users/lenov/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/activity_main.xml" value="0.15534420289855072" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
