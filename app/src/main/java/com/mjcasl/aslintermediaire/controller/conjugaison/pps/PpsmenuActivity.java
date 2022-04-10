@@ -58,5 +58,21 @@ public class PpsmenuActivity extends AppCompatActivity {
                 startActivity(PpsActivity3Intent);
             }
         });
+
+        mExPps4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent PpsActivity4Intent = new Intent(PpsmenuActivity.this, Ex4ppsActivity.class);
+                startActivity(PpsActivity4Intent);
+            }
+        });
+
+        mExPps5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent PpsActivity5Intent = new Intent(PpsmenuActivity.this, Ex5ppsActivity.class);
+                startActivity(PpsActivity5Intent);
+            }
+        });
     }
 }
