@@ -58,19 +58,19 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expps3);
+        setContentView(R.layout.activity_expps5);
 
 
         mImgBank = this.generateQuestions();
         mScore = 0;
-        mNumberOfQuestions = 5;
+        mNumberOfQuestions = 10;
 
         if (savedInstanceState != null) {
             mScore = savedInstanceState.getInt(BUNDLE_STATE_SCORE);
             mNumberOfQuestions = savedInstanceState.getInt(BUNDLE_STATE_QUESTION);
         } else {
             mScore = 0;
-            mNumberOfQuestions = 5;
+            mNumberOfQuestions = 10;
         }
 
         mEnableTouchEvents = true;
@@ -100,7 +100,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
         mImgQuestion = mImgBank.getImgQuestion();
         this.displayQuestion(mImgQuestion);
 
-        mQuestionTotal = 5;
+        mQuestionTotal = 10;
         mQuestionCounter = 1;
     }
 
@@ -127,7 +127,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
 
         if(responseIndex == mImgQuestion.getAnswerIndex()){
                 // Bon
-            Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
+            Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
 
@@ -136,7 +136,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
             mScore++;
         } else {
             // Mauvais
-            Toast toast = Toast.makeText(this, "Mauvaise réponse !",Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this, "Mauvaise réponse !",Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
 
@@ -166,7 +166,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void run() {
                 mEnableTouchEvents = true;
-                if (--mNumberOfQuestions == 0 && mQuestionCounter <= 5) {
+                if (--mNumberOfQuestions == 0 && mQuestionCounter <= 10) {
                     // End the game
                     endGame();
                 } else {
@@ -176,7 +176,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
-                    mNbrofQuestion.setText(mQuestionCounter + "/5");
+                    mNbrofQuestion.setText(mQuestionCounter + "/10");
 
                     mProgressBar.setProgress(mQuestionCounter);
 
@@ -186,7 +186,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                     mPpsAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
-        }, 2000);
+        }, 4000);
     }
 
     @Override
@@ -197,7 +197,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
     private void endGame(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Bien joué !")
-        .setMessage("Votre score est de " + mScore + "/5")
+        .setMessage("Votre score est de " + mScore + "/10")
         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -230,7 +230,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Tu", "Elle", "Nous", "Je"),
                 1);
 
-        ImgQuestion imgQuestion3 = new ImgQuestion("les cigognes partent vers le sud et ______ reviendront au printemps.",
+        ImgQuestion imgQuestion3 = new ImgQuestion("Les cigognes partent vers le sud et ______ reviendront au printemps.",
                 R.drawable.cigogne, Arrays.asList("Il", "Elle", "Ils", "Elles"),
                 3);
 

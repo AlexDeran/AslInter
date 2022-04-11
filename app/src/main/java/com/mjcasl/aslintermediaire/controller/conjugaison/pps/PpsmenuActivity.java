@@ -74,5 +74,13 @@ public class PpsmenuActivity extends AppCompatActivity {
                 startActivity(PpsActivity5Intent);
             }
         });
+
+        mQuizFinal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent QFPPSActivityIntent = new Intent(PpsmenuActivity.this, QFPPSActivity.class);
+                startActivity(QFPPSActivityIntent);
+            }
+        });
     }
 }

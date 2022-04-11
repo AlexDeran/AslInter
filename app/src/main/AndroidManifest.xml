@@ -104,6 +104,14 @@
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
         </activity>
 
+        <activity
+            android:name=".controller.conjugaison.pps.QFPPSActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
+        </activity>
+
     </application>
 
 </manifest>

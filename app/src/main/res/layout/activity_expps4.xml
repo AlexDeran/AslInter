@@ -123,7 +123,7 @@
         android:backgroundTint="@color/black"
         android:text="Answer1"
         android:textColor="@color/white"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
 
 
@@ -139,7 +139,7 @@
         android:text="Answer2"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -162,7 +162,7 @@
         android:backgroundTintMode="src_over"
         android:text="Answer3"
         android:textColor="@color/white"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/pps_answer4_btn"
@@ -175,7 +175,7 @@
         android:backgroundTint="@color/black"
         android:text="Answer4"
         android:textColor="@color/white"
-        android:textSize="40sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 
