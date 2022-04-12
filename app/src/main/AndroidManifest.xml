@@ -26,6 +26,14 @@
         </activity>
 
         <activity
+            android:name=".controller.lecon.pps.pps"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity" />
+        </activity>
+
+        <activity
             android:exported="true"
             android:name="com.mjcasl.aslintermediaire.controller.SplashScreenActivity"
             android:screenOrientation="portrait"

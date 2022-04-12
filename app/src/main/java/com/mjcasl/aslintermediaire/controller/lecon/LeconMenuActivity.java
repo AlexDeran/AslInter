@@ -8,9 +8,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.mjcasl.aslintermediaire.MainActivity;
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
+import com.mjcasl.aslintermediaire.controller.lecon.pps.pps;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
 ;
@@ -44,7 +44,7 @@ public class LeconMenuActivity extends AppCompatActivity {
         mPPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent PPSActivityIntent = new Intent(LeconMenuActivity.this, MainActivity.class);
+                Intent PPSActivityIntent = new Intent(LeconMenuActivity.this, pps.class);
                 startActivity(PPSActivityIntent);
             }
         });
