@@ -58,7 +58,7 @@ public class Ex3ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expps3);
+        setContentView(R.layout.expps3);
 
 
         mImgBank = this.generateQuestions();

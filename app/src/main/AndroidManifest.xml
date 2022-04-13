@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name=".controller.lecon.pps.pps"
+            android:name=".controller.lecon.pps.LeconPpsActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -40,7 +40,6 @@
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -118,6 +117,63 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.PremenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.Ex1preActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.Ex2preActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.Ex3preActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.Ex4preActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.Ex5preActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.QFPREActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
         </activity>
 
     </application>

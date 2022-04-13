@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
+package com.mjcasl.aslintermediaire.controller.conjugaison.present;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,27 +20,28 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.QuestionBank;
-import com.mjcasl.aslintermediaire.model.Question;
+import com.mjcasl.aslintermediaire.model.ImgBank;
+import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 
-public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex3preActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static final long COUNTDOWN_IN_MILLIS = 11000;
+    //public static final long COUNTDOWN_IN_MILLIS = 11000;
 
     private TextView mPpsQuestion;
     private Button mPpsAnswer1;
     private Button mPpsAnswer2;
     private Button mPpsAnswer3;
     private Button mPpsAnswer4;
+    private ImageView mImage;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
     private ProgressBar mProgressBar;
 
-    private QuestionBank mQuestionBank;
-    private Question mQuestion;
+    private ImgBank mImgBank;
+    private ImgQuestion mImgQuestion;
 
     private int mScore;
     private int mNumberOfQuestions;
@@ -56,10 +58,10 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expps1);
+        setContentView(R.layout.expps3);
 
 
-        mQuestionBank = this.generateQuestions();
+        mImgBank = this.generateQuestions();
         mScore = 0;
         mNumberOfQuestions = 5;
 
@@ -78,6 +80,7 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
         mPpsAnswer2 = findViewById(R.id.pps_answer2_btn);
         mPpsAnswer3 = findViewById(R.id.pps_answer3_btn);
         mPpsAnswer4 = findViewById(R.id.pps_answer4_btn);
+        mImage = findViewById(R.id.pps_image);
 
         mScoreDisplay = findViewById(R.id.pps_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
@@ -94,8 +97,8 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
         mPpsAnswer3.setOnClickListener(this);
         mPpsAnswer4.setOnClickListener(this);
 
-        mQuestion = mQuestionBank.getQuestion();
-        this.displayQuestion(mQuestion);
+        mImgQuestion = mImgBank.getImgQuestion();
+        this.displayQuestion(mImgQuestion);
 
         mQuestionTotal = 5;
         mQuestionCounter = 1;
@@ -122,7 +125,7 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
         int taganswer3 = (int) mPpsAnswer3.getTag();
         int taganswer4 = (int) mPpsAnswer4.getTag();
 
-        if(responseIndex == mQuestion.getAnswerIndex()){
+        if(responseIndex == mImgQuestion.getAnswerIndex()){
                 // Bon
             Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
@@ -139,20 +142,20 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
 
             v.setBackgroundColor(Color.parseColor("#830000"));
 
-            if(taganswer1 == mQuestion.getAnswerIndex()){
+            if(taganswer1 == mImgQuestion.getAnswerIndex()){
                 mPpsAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
-            else if(taganswer2 == mQuestion.getAnswerIndex()){
+            else if(taganswer2 == mImgQuestion.getAnswerIndex()){
                 mPpsAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
-            else if(taganswer3 == mQuestion.getAnswerIndex()){
+            else if(taganswer3 == mImgQuestion.getAnswerIndex()){
                 mPpsAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
-            else if(taganswer4 == mQuestion.getAnswerIndex()){
+            else if(taganswer4 == mImgQuestion.getAnswerIndex()){
                 mPpsAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
@@ -168,8 +171,8 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
                     endGame();
                 } else {
 
-                    mQuestion = mQuestionBank.getQuestion();
-                    displayQuestion(mQuestion);
+                    mImgQuestion = mImgBank.getImgQuestion();
+                    displayQuestion(mImgQuestion);
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
@@ -209,60 +212,67 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
         .show();
     }
 
-    private void displayQuestion(final Question Question) {
-        mPpsQuestion.setText(Question.getQuestion());
-        mPpsAnswer1.setText(Question.getChoiceList().get(0));
-        mPpsAnswer2.setText(Question.getChoiceList().get(1));
-        mPpsAnswer3.setText(Question.getChoiceList().get(2));
-        mPpsAnswer4.setText(Question.getChoiceList().get(3));
+    private void displayQuestion(final ImgQuestion imgQuestion) {
+        mPpsQuestion.setText(imgQuestion.getImgQuestion());
+        mImage.setImageResource(imgQuestion.getImage());
+        mPpsAnswer1.setText(imgQuestion.getChoiceList().get(0));
+        mPpsAnswer2.setText(imgQuestion.getChoiceList().get(1));
+        mPpsAnswer3.setText(imgQuestion.getChoiceList().get(2));
+        mPpsAnswer4.setText(imgQuestion.getChoiceList().get(3));
     }
 
-    private QuestionBank generateQuestions() {
-        Question Question1 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Je", "Mon", "Dans", "Sur"),
-                0);
-
-        Question Question2 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Tout", "Sur", "Tu", "Pour"),
-                2);
-
-        Question Question3 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Par", "Dans", "Ta", "Il"),
+    private ImgBank generateQuestions() {
+        ImgQuestion imgQuestion1 = new ImgQuestion("Léa et sa maman", R.drawable.leamaman,
+                Arrays.asList("Je", "Tu", "Ils", "Elles"),
                 3);
 
-        Question Question4 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Sur", "Pour", "Elle", "Par"),
-                2);
-
-        Question Question5 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Pour", "On", "Dans", "Sur"),
+        ImgQuestion imgQuestion2 = new ImgQuestion("La joueuse de flûte",R.drawable.flute,
+                Arrays.asList("Il", "Elle", "Nous", "Je"),
                 1);
 
-        Question Question6 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Nous", "Ta", "Mon", "Sur"),
+        ImgQuestion imgQuestion3 = new ImgQuestion("L'enfant fatigué",R.drawable.enfantfatigue,
+                Arrays.asList("Il", "Elle", "Ils", "Je"),
                 0);
 
-        Question Question7 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Tout", "Dans", "Mon", "Vous"),
+        ImgQuestion imgQuestion4 = new ImgQuestion("Les gros nuages",R.drawable.nuage,
+                Arrays.asList("Ils", "Tu", "Je", "Nous"),
+                0);
+
+        ImgQuestion imgQuestion5 = new ImgQuestion("Rémi et Anna",R.drawable.remianna,
+                Arrays.asList("Je", "Tu", "Ils", "Elle"),
+                2);
+
+        ImgQuestion imgQuestion6 = new ImgQuestion("La tortue et sa salade",R.drawable.saladetortue,
+                Arrays.asList("Il", "Vous", "Je", "Elles"),
                 3);
 
-        Question Question8 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Par", "Ils", "Tout", "Sur"),
-                1);
-
-        Question Question9 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Mon", "Pour", "Sur", "Elles"),
+        ImgQuestion imgQuestion7 = new ImgQuestion("Les bougies d'anniversaire",R.drawable.bougies,
+                Arrays.asList("Je", "Nous", "Tu", "Elles"),
                 3);
 
-        return new QuestionBank(Arrays.asList(Question1,
-                Question2,
-                Question3,
-                Question4,
-                Question5,
-                Question6,
-                Question7,
-                Question8,
-                Question9
+        ImgQuestion imgQuestion8 = new ImgQuestion("Thomas et son chien ",R.drawable.thomasiench,
+                Arrays.asList("Il", "Nous", "Ils", "Elles"),
+                2);
+
+        ImgQuestion imgQuestion9 = new ImgQuestion("L'affreuse sorcière",R.drawable.sorciere,
+                Arrays.asList("Elle", "Ils", "Je", "Elles"),
+                0);
+
+        ImgQuestion imgQuestion10 = new ImgQuestion("Le poisson rouge",R.drawable.poissonrouge,
+                Arrays.asList("Ils", "Tu", "Il", "Nous"),
+                2);
+
+
+        return new ImgBank(Arrays.asList(imgQuestion1,
+                imgQuestion2,
+                imgQuestion3,
+                imgQuestion4,
+                imgQuestion5,
+                imgQuestion6,
+                imgQuestion7,
+                imgQuestion8,
+                imgQuestion9,
+                imgQuestion10
         ));
     }
 }

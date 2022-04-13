@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity;
+import com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity;
 import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
 import com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
@@ -16,7 +17,7 @@ import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
 public class ConjugaisonActivity  extends AppCompatActivity {
     private Button mPps;
-    private Button mGram;
+    private Button mPresent;
     private Button mLecon;
     private Button mVoc;
     private Button mTBD;
@@ -26,14 +27,14 @@ public class ConjugaisonActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_conjugaisonmenu);
+        setContentView(R.layout.conjugaisonmenu);
 
         mToolbar = findViewById(R.id.asl_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mPps = findViewById(R.id.pps_btn);
-        mGram = findViewById(R.id.gram_btn);
+        mPresent = findViewById(R.id.present_btn);
         mLecon = findViewById(R.id.leçon_btn);
         mVoc = findViewById(R.id.voc_btn);
         mTBD = findViewById(R.id.tbd_btn);
@@ -47,10 +48,10 @@ public class ConjugaisonActivity  extends AppCompatActivity {
             }
         });
 
-        mGram.setOnClickListener(new View.OnClickListener() {
+        mPresent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent GramActivityIntent = new Intent(ConjugaisonActivity.this, GramActivity.class);
+                Intent GramActivityIntent = new Intent(ConjugaisonActivity.this, PremenuActivity.class);
                 startActivity(GramActivityIntent);
             }
         });

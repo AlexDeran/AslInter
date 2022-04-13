@@ -1,4 +1,5 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
+package com.mjcasl.aslintermediaire.controller.conjugaison.present;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,12 +20,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.QuestionBank;
 import com.mjcasl.aslintermediaire.model.Question;
+import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex4preActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
@@ -56,7 +57,7 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expps1);
+        setContentView(R.layout.expps4);
 
 
         mQuestionBank = this.generateQuestions();
@@ -218,40 +219,28 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private QuestionBank generateQuestions() {
-        Question Question1 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Je", "Mon", "Dans", "Sur"),
-                0);
-
-        Question Question2 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Tout", "Sur", "Tu", "Pour"),
-                2);
-
-        Question Question3 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Par", "Dans", "Ta", "Il"),
-                3);
-
-        Question Question4 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Sur", "Pour", "Elle", "Par"),
-                2);
-
-        Question Question5 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Pour", "On", "Dans", "Sur"),
+        Question Question1 = new Question("Vous",
+                Arrays.asList("Mes amis et moi", "Ton ami et toi", "Mon ami et moi", "Tes amis"),
                 1);
 
-        Question Question6 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Nous", "Ta", "Mon", "Sur"),
-                0);
-
-        Question Question7 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Tout", "Dans", "Mon", "Vous"),
+        Question Question2 = new Question("Elles",
+                Arrays.asList("Les melons bien mûrs", "L'ananas", "La fraise rouge", "Les cerises rouges"),
                 3);
 
-        Question Question8 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Par", "Ils", "Tout", "Sur"),
-                1);
+        Question Question3 = new Question("Il",
+                Arrays.asList("Mes jouets favoris", "Mes chemises blanches", "Mon livre preféré", "Ma veste usée"),
+                2);
 
-        Question Question9 = new Question("Quel est le pronom personnel sujet ?",
-                Arrays.asList("Mon", "Pour", "Sur", "Elles"),
+        Question Question4 = new Question("Elle",
+                Arrays.asList("Les échelles", "Le camion de pompier", "La grande échelle", "Les pompiers"),
+                2);
+
+        Question Question5 = new Question("Ils",
+                Arrays.asList("Les moutons blancs", "Le chien du berger", "Les brebis", "La laine du mouton"),
+                0);
+
+        Question Question6 = new Question("Nous",
+                Arrays.asList("Ta mère et toi", "Son père et lui", "Sa mère et elle", "Mon père et moi"),
                 3);
 
         return new QuestionBank(Arrays.asList(Question1,
@@ -259,10 +248,7 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
                 Question3,
                 Question4,
                 Question5,
-                Question6,
-                Question7,
-                Question8,
-                Question9
+                Question6
         ));
     }
 }

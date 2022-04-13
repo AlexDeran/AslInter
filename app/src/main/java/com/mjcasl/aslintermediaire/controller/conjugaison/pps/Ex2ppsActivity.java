@@ -58,7 +58,7 @@ public class Ex2ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expps2);
+        setContentView(R.layout.expps2);
 
 
         mImgBank = this.generateQuestions();
@@ -75,7 +75,7 @@ public class Ex2ppsActivity extends AppCompatActivity implements View.OnClickLis
 
         mEnableTouchEvents = true;
 
-        mPpsQuestion = findViewById(R.id.Pps_question_txt);
+        mPpsQuestion = findViewById(R.id.pps_question_txt);
         mPpsAnswer1 = findViewById(R.id.pps_answer1_btn);
         mPpsAnswer2 = findViewById(R.id.pps_answer2_btn);
         mPpsAnswer3 = findViewById(R.id.pps_answer3_btn);
@@ -84,7 +84,7 @@ public class Ex2ppsActivity extends AppCompatActivity implements View.OnClickLis
 
         mScoreDisplay = findViewById(R.id.pps_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mProgressBar =findViewById(R.id.Pps_progress_bar);
+        mProgressBar =findViewById(R.id.pps_progress_bar);
 
         // Use the tag property to 'name' the buttons
         mPpsAnswer1.setTag(0);

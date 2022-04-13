@@ -25,7 +25,6 @@ import com.mjcasl.aslintermediaire.model.ImgBank;
 import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 
-import java.util.Arrays;
 import java.util.Locale;
 
 public class VocActivity extends AppCompatActivity implements View.OnClickListener {
@@ -65,7 +64,7 @@ public class VocActivity extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voc);
+        setContentView(R.layout.voc);
 
         mScore = 0;
         mNumberOfQuestions = 10;

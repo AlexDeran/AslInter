@@ -22,7 +22,7 @@ public class PpsmenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ppsmenu);
+        setContentView(R.layout.ppsmenu);
 
         mToolbar = findViewById(R.id.asl_toolbar);
         setSupportActionBar(mToolbar);

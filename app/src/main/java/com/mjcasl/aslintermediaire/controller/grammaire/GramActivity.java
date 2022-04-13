@@ -68,7 +68,7 @@ public class GramActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gram);
+        setContentView(R.layout.gram);
 
 
         mQuestionBank = this.generateQuestions();

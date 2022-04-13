@@ -1,4 +1,5 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
+package com.mjcasl.aslintermediaire.controller.conjugaison.present;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,12 +20,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.QuestionBank;
 import com.mjcasl.aslintermediaire.model.Question;
+import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex1preActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
@@ -56,7 +57,7 @@ public class Ex1ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expps1);
+        setContentView(R.layout.expresent1);
 
 
         mQuestionBank = this.generateQuestions();

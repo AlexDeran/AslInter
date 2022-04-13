@@ -10,7 +10,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
-import com.mjcasl.aslintermediaire.controller.lecon.pps.pps;
+import com.mjcasl.aslintermediaire.controller.lecon.pps.LeconPpsActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
 ;
@@ -28,7 +28,7 @@ public class LeconMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leconmenu);
+        setContentView(R.layout.leconmenu);
 
         mToolbar = findViewById(R.id.asl_toolbar);
         setSupportActionBar(mToolbar);
@@ -44,7 +44,7 @@ public class LeconMenuActivity extends AppCompatActivity {
         mPPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent PPSActivityIntent = new Intent(LeconMenuActivity.this, pps.class);
+                Intent PPSActivityIntent = new Intent(LeconMenuActivity.this, LeconPpsActivity.class);
                 startActivity(PPSActivityIntent);
             }
         });
