@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.model.ImgBank;
 import com.mjcasl.aslintermediaire.model.ImgQuestion;
+import com.mjcasl.aslintermediaire.model.Question;
 
 import java.util.Arrays;
 import java.util.Locale;
@@ -31,11 +32,11 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
 
     public static final long COUNTDOWN_IN_MILLIS = 21000;
 
-    private TextView mPPSQuestion;
-    private Button mPPSAnswer1;
-    private Button mPPSAnswer2;
-    private Button mPPSAnswer3;
-    private Button mPPSAnswer4;
+    private TextView mpreQuestion;
+    private Button mpreAnswer1;
+    private Button mpreAnswer2;
+    private Button mpreAnswer3;
+    private Button mpreAnswer4;
     private ImageView mImage;
 
     private TextView mScoreDisplay;
@@ -64,7 +65,7 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.qfpps);
+        setContentView(R.layout.qfpresent);
 
         mImgBank = this.generateQuestions();
         mScore = 0;
@@ -80,28 +81,28 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
 
         mEnableTouchEvents = true;
 
-        mPPSQuestion = findViewById(R.id.Pps_question_txt);
-        mImage = findViewById(R.id.pps_image);
-        mPPSAnswer1 = findViewById(R.id.pps_answer1_btn);
-        mPPSAnswer2 = findViewById(R.id.pps_answer2_btn);
-        mPPSAnswer3 = findViewById(R.id.pps_answer3_btn);
-        mPPSAnswer4 = findViewById(R.id.pps_answer4_btn);
+        mpreQuestion = findViewById(R.id.pre_question_txt);
+        mImage = findViewById(R.id.pre_image);
+        mpreAnswer1 = findViewById(R.id.pre_answer1_btn);
+        mpreAnswer2 = findViewById(R.id.pre_answer2_btn);
+        mpreAnswer3 = findViewById(R.id.pre_answer3_btn);
+        mpreAnswer4 = findViewById(R.id.pre_answer4_btn);
 
-        mScoreDisplay = findViewById(R.id.pps_score);
+        mScoreDisplay = findViewById(R.id.pre_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mCountDown = findViewById(R.id.pps_question_timer);
-        mProgressBar =findViewById(R.id.Pps_progress_bar);
+        mCountDown = findViewById(R.id.pre_question_timer);
+        mProgressBar =findViewById(R.id.pre_progress_bar);
 
         // Use the tag property to 'name' the buttons
-        mPPSAnswer1.setTag(0);
-        mPPSAnswer2.setTag(1);
-        mPPSAnswer3.setTag(2);
-        mPPSAnswer4.setTag(3);
+        mpreAnswer1.setTag(0);
+        mpreAnswer2.setTag(1);
+        mpreAnswer3.setTag(2);
+        mpreAnswer4.setTag(3);
 
-        mPPSAnswer1.setOnClickListener(this);
-        mPPSAnswer2.setOnClickListener(this);
-        mPPSAnswer3.setOnClickListener(this);
-        mPPSAnswer4.setOnClickListener(this);
+        mpreAnswer1.setOnClickListener(this);
+        mpreAnswer2.setOnClickListener(this);
+        mpreAnswer3.setOnClickListener(this);
+        mpreAnswer4.setOnClickListener(this);
 
         mImgQuestion = mImgBank.getImgQuestion();
         this.displayImgQuestion(mImgQuestion);
@@ -128,10 +129,10 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         int responseIndex = (int) v.getTag();
 
-        int taganswer1 = (int) mPPSAnswer1.getTag();
-        int taganswer2 = (int) mPPSAnswer2.getTag();
-        int taganswer3 = (int) mPPSAnswer3.getTag();
-        int taganswer4 = (int) mPPSAnswer4.getTag();
+        int taganswer1 = (int) mpreAnswer1.getTag();
+        int taganswer2 = (int) mpreAnswer2.getTag();
+        int taganswer3 = (int) mpreAnswer3.getTag();
+        int taganswer4 = (int) mpreAnswer4.getTag();
 
         mCountDownTimer.cancel();
 
@@ -153,20 +154,20 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
             v.setBackgroundColor(Color.parseColor("#830000"));
 
             if(taganswer1 == mImgQuestion.getAnswerIndex()){
-                mPPSAnswer1.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
             else if(taganswer2 == mImgQuestion.getAnswerIndex()){
-                mPPSAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
+                mpreAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
             else if(taganswer3 == mImgQuestion.getAnswerIndex()){
-                mPPSAnswer3.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
             else if(taganswer4 == mImgQuestion.getAnswerIndex()){
-                mPPSAnswer4.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
         mEnableTouchEvents = false;
@@ -191,10 +192,10 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
 
                     mProgressBar.setProgress(mQuestionCounter);
 
-                    mPPSAnswer1.setBackgroundColor(Color.parseColor("#000000"));
-                    mPPSAnswer2.setBackgroundColor(Color.parseColor("#000000"));
-                    mPPSAnswer3.setBackgroundColor(Color.parseColor("#000000"));
-                    mPPSAnswer4.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer1.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer2.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer3.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
         }, 1000);
@@ -270,217 +271,219 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void displayImgQuestion(final ImgQuestion imgQuestion) {
-        mPPSQuestion.setText(imgQuestion.getImgQuestion());
+        mpreQuestion.setText(imgQuestion.getImgQuestion());
         mImage.setImageResource(imgQuestion.getImage());
-        mPPSAnswer1.setText(imgQuestion.getChoiceList().get(0));
-        mPPSAnswer2.setText(imgQuestion.getChoiceList().get(1));
-        mPPSAnswer3.setText(imgQuestion.getChoiceList().get(2));
-        mPPSAnswer4.setText(imgQuestion.getChoiceList().get(3));
+        mpreAnswer1.setText(imgQuestion.getChoiceList().get(0));
+        mpreAnswer2.setText(imgQuestion.getChoiceList().get(1));
+        mpreAnswer3.setText(imgQuestion.getChoiceList().get(2));
+        mpreAnswer4.setText(imgQuestion.getChoiceList().get(3));
     }
     private ImgBank generateQuestions() {
 
-        ImgQuestion imgQuestion1 = new ImgQuestion("Les renards mangent de la viande mais ______ aiment aussi les fruits.",
-                R.drawable.renard, Arrays.asList("Je", "Tu", "Ils", "Elles"),
+        ImgQuestion imgQuestion1 = new ImgQuestion("Vous (discuter) autour de la table.", R.drawable.discuter,
+                Arrays.asList("Discute", "Discutent", "Discutez", "Discutons"),
                 2);
 
-        ImgQuestion imgQuestion2 = new ImgQuestion("Julie est contente car ______ à une nouvelle robe.",R.drawable.julie,
-                Arrays.asList("Tu", "Elle", "Nous", "Je"),
+        ImgQuestion imgQuestion2 = new ImgQuestion("Les feuilles (tomber) de l'arbre.",R.drawable.feuillestombent,
+                Arrays.asList("Tombes", "Tombent", "Tombons", "Tombe"),
                 1);
 
-        ImgQuestion imgQuestion3 = new ImgQuestion("Les cigognes partent vers le sud et ______ reviendront au printemps.",
-                R.drawable.cigogne, Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                3);
-
-        ImgQuestion imgQuestion4 = new ImgQuestion("Moi, ______ trouve que cet exercice est facile.",R.drawable.moi,
-                Arrays.asList("Ils", "Tu", "Je", "Nous"),
-                2);
-
-        ImgQuestion imgQuestion5 = new ImgQuestion("Demain, mes amis et moi, ______ irons au cinéma.",R.drawable.demain,
-                Arrays.asList("Il", "Nous", "Je", "Elle"),
-                1);
-
-        ImgQuestion imgQuestion6 = new ImgQuestion("Le soleil se lève à l'est et ______ se couche à l'ouest.",R.drawable.soleil,
-                Arrays.asList("Il", "Vous", "Je", "Elles"),
+        ImgQuestion imgQuestion3 = new ImgQuestion("Tu (préparer) un gâteau.",R.drawable.amelie,
+                Arrays.asList("Prépares", "Prépare", "Préparent", "Préparez"),
                 0);
 
-        ImgQuestion imgQuestion7 = new ImgQuestion("Ton copain et toi, ______ êtes vraiment inséparables.",R.drawable.copain,
-                Arrays.asList("Je", "Vous", "Tu", "Nous"),
+        ImgQuestion imgQuestion4 = new ImgQuestion("Nous (regarder) la télévision.",R.drawable.television,
+                Arrays.asList("Regardes", "Regardons", "Regardez", "Regardent"),
                 1);
 
-        ImgQuestion imgQuestion8 = new ImgQuestion("Toi, ______ as l'air d'avoir fait une bêtise. ",R.drawable.toi,
-                Arrays.asList("Il", "Tu", "Ils", "Je"),
-                1);
-
-        ImgQuestion imgQuestion9 = new ImgQuestion("Mon ami et moi, ______ allons à la piscine.",R.drawable.piscine,
-                Arrays.asList("Elles", "Vous", "Je", "Nous"),
-                3);
-
-        ImgQuestion imgQuestion10 = new ImgQuestion("Sonia et ses copines se lèvent et ______ dansent.",R.drawable.sonia,
-                Arrays.asList("Ils", "Elles", "Il", "Elle"),
-                1);
-
-        ImgQuestion imgQuestion11 = new ImgQuestion("Les oiseaux se posent sur l'arbre et ______ chantent.",R.drawable.oiseaux5,
-                Arrays.asList("Ils", "Je", "Il", "Tu"),
+        ImgQuestion imgQuestion5 = new ImgQuestion("Le Père Noël (apporter) des cadeaux.",R.drawable.perenoel,
+                Arrays.asList("Apporte", "Apportent", "Apportes", "Apportons"),
                 0);
 
-        ImgQuestion imgQuestion12 = new ImgQuestion("La voiture freine et ______ s'arrête au feu rouge.",R.drawable.voiturefreine,
-                Arrays.asList("Ils", "Elles", "Il", "Elle"),
-                3);
-
-        ImgQuestion imgQuestion13 = new ImgQuestion("Toi et ton chien, ______ devriez aller en promenade.",R.drawable.chienprom,
-                Arrays.asList("Je", "Tu", "Vous", "Nous"),
-                2);
-
-        ImgQuestion imgQuestion14 = new ImgQuestion("Toi, ______ regardes trop la télévision.",R.drawable.toitv,
-                Arrays.asList("Il", "Tu", "Je", "Nous"),
-                1);
-
-        ImgQuestion imgQuestion15 = new ImgQuestion("Le loup se gonfle, puis ______ souffle sur la maison.",R.drawable.loup,
-                Arrays.asList("Nous", "Ils", "Vous", "Il"),
-                3);
-
-        ImgQuestion imgQuestion16 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Je", "Mon", "Dans", "Sur"),
+        ImgQuestion imgQuestion6 = new ImgQuestion("Les fleurs (pousser) au printemps",R.drawable.fleurs,
+                Arrays.asList("Poussent", "Pousse", "Poussons", "Poussez"),
                 0);
 
-        ImgQuestion imgQuestion17 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Tout", "Sur", "Tu", "Pour"),
-                2);
-
-        ImgQuestion imgQuestion18 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Par", "Dans", "Ta", "Il"),
-                3);
-
-        ImgQuestion imgQuestion19 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Sur", "Pour", "Elle", "Par"),
-                2);
-
-        ImgQuestion imgQuestion20 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Pour", "On", "Dans", "Sur"),
-                1);
-
-        ImgQuestion imgQuestion21 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Nous", "Ta", "Mon", "Sur"),
+        ImgQuestion imgQuestion7 = new ImgQuestion(" Nous (acheter) des bonbons.",R.drawable.bonbons,
+                Arrays.asList("Achetons", "Achètes", "Achètent", "Achetez"),
                 0);
 
-        ImgQuestion imgQuestion22 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Tout", "Dans", "Mon", "Vous"),
+        ImgQuestion imgQuestion8 = new ImgQuestion("Vous (jouer) aux cartes.",R.drawable.cartes,
+                Arrays.asList("Joue", "Joues", "Jouons", "Jouez"),
                 3);
 
-        ImgQuestion imgQuestion23 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
-                Arrays.asList("Par", "Ils", "Tout", "Sur"),
+        ImgQuestion imgQuestion9 = new ImgQuestion("Mes amis (arriver) à l'école",R.drawable.amis,
+                Arrays.asList("Arrive", "Arrivent", "Arrivons", "Arrivez"),
                 1);
 
-        ImgQuestion imgQuestion24 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
+        ImgQuestion imgQuestion10 = new ImgQuestion("Tu (chanter) trop fort.",R.drawable.chanteur,
+                Arrays.asList("Chantons", "Chante", "Chantes", "Chantez"),
+                2);
+
+        ImgQuestion imgQuestion11 = new ImgQuestion("Es-ce que vous ______ à la piscine demain ?",R.drawable.piscine,
+                Arrays.asList("Venons", "Viens", "Venez", "Viennent"),
+                2);
+
+        ImgQuestion imgQuestion12 = new ImgQuestion("Vous ______ avec nous à la plage.",R.drawable.plage2,
+                Arrays.asList("Viens", "Viennent", "Venons", "Venez"),
+                3);
+
+        ImgQuestion imgQuestion13 = new ImgQuestion("Je ______ de terminer mon dessin.",R.drawable.dessin,
+                Arrays.asList("Viens", "Vient", "Venez", "Venons"),
+                0);
+
+        ImgQuestion imgQuestion14 = new ImgQuestion("On dirait que tu ______ de te reveiller.",R.drawable.reveiller,
+                Arrays.asList("Vont", "Viens", "Venez", "Venons"),
+                1);
+
+        ImgQuestion imgQuestion15 = new ImgQuestion("Ma copine ______  chez moi pour jouer à cache-cache.",R.drawable.cachecache,
+                Arrays.asList("Viens", "Venez", "Vient", "Viennent"),
+                2);
+
+        ImgQuestion imgQuestion16 = new ImgQuestion("Tu ______ à l'école.", R.drawable.ecole2,
+                Arrays.asList("Va", "Vas", "Vont", "Vais"),
+                1);
+
+        ImgQuestion imgQuestion17 = new ImgQuestion("Vous ______ à la montagne.",R.drawable.montagne,
+                Arrays.asList("Allons", "Vont", "Allez", "Va"),
+                2);
+
+        ImgQuestion imgQuestion18 = new ImgQuestion("Ils ______ au cinéma.",R.drawable.cinema,
+                Arrays.asList("Vont", "Allez", "Allons", "Vais"),
+                0);
+
+        ImgQuestion imgQuestion19 = new ImgQuestion("Nous ______ au restaurant.",R.drawable.restaurant,
+                Arrays.asList("Vais", "Va", "Vas", "Allons"),
+                3);
+
+        ImgQuestion imgQuestion20 = new ImgQuestion("Il ______ dans la fôret.",R.drawable.foret,
+                Arrays.asList("Vont", "Va", "Allez", "Allons"),
+                1);
+
+        ImgQuestion imgQuestion21 = new ImgQuestion("Je ______ au marché.",R.drawable.marche,
+                Arrays.asList("Vais", "Va", "Vont", "Allez"),
+                0);
+
+        ImgQuestion imgQuestion22 = new ImgQuestion("Sam ______ à la piscine le dimanche.",R.drawable.piscine,
+                Arrays.asList("Vont", "Allons", "Va", "Vais"),
+                2);
+
+        ImgQuestion imgQuestion23 = new ImgQuestion("Tu ______ trop vite avec ton vélo.",R.drawable.velo,
+                Arrays.asList("Vont", "Vais", "Allons", "Vas"),
+                3);
+
+        ImgQuestion imgQuestion24 = new ImgQuestion("Ce soir, nous ______ à la patinoire",R.drawable.patinoire,
+                Arrays.asList("Allons", "Vais", "Allez", "Vont"),
+                0);
+
+        ImgQuestion imgQuestion25 = new ImgQuestion("Les élèves ______ au zoo avec leur classe.",R.drawable.zoo,
+                Arrays.asList("Vais", "Vont", "Allons", "Va"),
+                1);
+
+        ImgQuestion imgQuestion26 = new ImgQuestion("Quel est le pronom personnel sujet ?",R.drawable.logo_mjc,
                 Arrays.asList("Mon", "Pour", "Sur", "Elles"),
                 3);
 
-        ImgQuestion imgQuestion25 = new ImgQuestion("La guitare éléctrique", R.drawable.guitare,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        ImgQuestion imgQuestion27 = new ImgQuestion("Vous ______ perdu, Monsieur ?",R.drawable.perdu,
+                Arrays.asList("Avez", "A", "Êtes", "Est"),
+                2);
+
+        ImgQuestion imgQuestion28 = new ImgQuestion("Nous ______ des jumelles.",R.drawable.jumelles,
+                Arrays.asList("Avez", "Avons", "Êtes", "Sommes"),
+                3);
+
+        ImgQuestion imgQuestion29 = new ImgQuestion("Les étoiles ______ loin dans le ciel.",R.drawable.etoiles,
+                Arrays.asList("Est", "As", "Sont", "Ont"),
+                2);
+
+        ImgQuestion imgQuestion30 = new ImgQuestion("Le lionceau ______ le petit du lion.",R.drawable.lionceau,
+                Arrays.asList("A", "As", "Es", "Est"),
+                3);
+
+        ImgQuestion imgQuestion31 = new ImgQuestion("Nous ______ un train à prendre.",R.drawable.train,
+                Arrays.asList("Est", "Ont", "Avons", "Sommes"),
+                2);
+
+
+        ImgQuestion imgQuestion32 = new ImgQuestion("______ félicitons le gagnant de la course.",R.drawable.logo_mjc,
+                Arrays.asList("Je", "Nous", "Tu", "Il"),
                 1);
 
-        ImgQuestion imgQuestion26 = new ImgQuestion("Le bouquet de fleurs",R.drawable.bouquet,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                0);
-
-        ImgQuestion imgQuestion27 = new ImgQuestion("Le petit chat",R.drawable.chat,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                0);
-
-        ImgQuestion imgQuestion28 = new ImgQuestion("La peinture",R.drawable.peinture,
-                Arrays.asList("Il", "Elles", "Elle", "Ils"),
-                2);
-
-        ImgQuestion imgQuestion29 = new ImgQuestion("Les oiseaux",R.drawable.oiseaux,
-                Arrays.asList("Il", "Elles", "Ils", "Elle"),
-                2);
-
-        ImgQuestion imgQuestion30 = new ImgQuestion("Les chaussettes",R.drawable.chaussettes,
-                Arrays.asList("Elles", "Ils", "Il", "Elle"),
-                0);
-
-        ImgQuestion imgQuestion31 = new ImgQuestion("Les voitures rouges",R.drawable.voiture,
-                Arrays.asList("Ils", "Elle", "Il", "Elles"),
+        ImgQuestion imgQuestion33 = new ImgQuestion("______ adore les dauphins et Harry Potter.",R.drawable.logo_mjc,
+                Arrays.asList("Nous", "Vous", "Ils", "J'"),
                 3);
 
-        ImgQuestion imgQuestion32 = new ImgQuestion("Les arbres",R.drawable.arbre,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                2);
-
-        ImgQuestion imgQuestion33 = new ImgQuestion("Les étoiles brillantes",R.drawable.etoiles,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        ImgQuestion imgQuestion34 = new ImgQuestion("______ prennent place sur la ligne de départ.",R.drawable.logo_mjc,
+                Arrays.asList("Nous", "Il", "Tu", "Ils"),
                 3);
 
-        ImgQuestion imgQuestion34 = new ImgQuestion("Les jolis jouets",R.drawable.jouets,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                2);
-
-        ImgQuestion imgQuestion35 = new ImgQuestion("L'épi de blé",R.drawable.epi,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        ImgQuestion imgQuestion35 = new ImgQuestion("______ applaudis tous les participants.",R.drawable.logo_mjc,
+                Arrays.asList("J'", "Vous", "Elle", "Nous"),
                 0);
 
-        ImgQuestion imgQuestion36 = new ImgQuestion("Léa et sa maman", R.drawable.leamaman,
-                Arrays.asList("Je", "Tu", "Ils", "Elles"),
+        ImgQuestion imgQuestion36 = new ImgQuestion("______ poursuivez les prisonniers qui se sont échappés.",R.drawable.logo_mjc,
+                Arrays.asList("Je", "Tu", "Nous", "Vous"),
                 3);
 
-        ImgQuestion imgQuestion37 = new ImgQuestion("La joueuse de flûte",R.drawable.flute,
-                Arrays.asList("Il", "Elle", "Nous", "Je"),
+        ImgQuestion imgQuestion37 = new ImgQuestion("______ pratiquent la gymnastique depuis plusieurs années.",R.drawable.logo_mjc,
+                Arrays.asList("Ils", "Je", "Nous", "Elle"),
+                0);
+
+        ImgQuestion imgQuestion38 = new ImgQuestion("______ accordes beaucoup trop d'importance à cette nouvelle.",R.drawable.logo_mjc,
+                Arrays.asList("Je", "Nous", "Tu", "Ils"),
+                2);
+
+        ImgQuestion imgQuestion39 = new ImgQuestion("______ fleuri au printemps.",R.drawable.logo_mjc,
+                Arrays.asList("Les capucines", "Le lilas", "Les violettes", "Les roses"),
                 1);
 
-        ImgQuestion imgQuestion38 = new ImgQuestion("L'enfant fatigué",R.drawable.enfantfatigue,
-                Arrays.asList("Il", "Elle", "Ils", "Je"),
-                0);
-
-        ImgQuestion imgQuestion39 = new ImgQuestion("Les gros nuages",R.drawable.nuage,
-                Arrays.asList("Ils", "Tu", "Je", "Nous"),
-                0);
-
-        ImgQuestion imgQuestion40 = new ImgQuestion("Rémi et Anna",R.drawable.remianna,
-                Arrays.asList("Je", "Tu", "Ils", "Elle"),
-                2);
-
-        ImgQuestion imgQuestion41 = new ImgQuestion("La tortue et sa salade",R.drawable.saladetortue,
-                Arrays.asList("Il", "Vous", "Je", "Elles"),
-                3);
-
-        ImgQuestion imgQuestion42 = new ImgQuestion("Les bougies d'anniversaire",R.drawable.bougies,
-                Arrays.asList("Je", "Nous", "Tu", "Elles"),
-                3);
-
-        ImgQuestion imgQuestion43 = new ImgQuestion("Thomas et son chien ",R.drawable.thomasiench,
-                Arrays.asList("Il", "Nous", "Ils", "Elles"),
-                2);
-
-        ImgQuestion imgQuestion44 = new ImgQuestion("L'affreuse sorcière",R.drawable.sorciere,
-                Arrays.asList("Elle", "Ils", "Je", "Elles"),
-                0);
-
-        ImgQuestion imgQuestion45 = new ImgQuestion("Le poisson rouge",R.drawable.poissonrouge,
-                Arrays.asList("Ils", "Tu", "Il", "Nous"),
-                2);
-        ImgQuestion imgQuestion46 = new ImgQuestion("Vous",R.drawable.logo_mjc,
-                Arrays.asList("Mes amis et moi", "Ton ami et toi", "Mon ami et moi", "Tes amis"),
+        ImgQuestion imgQuestion40 = new ImgQuestion("______ crient très fort quand ______ jouent.",R.drawable.logo_mjc,
+                Arrays.asList("Il", "Ils", "Je", "Vous"),
                 1);
 
-        ImgQuestion imgQuestion47 = new ImgQuestion("Elles",R.drawable.logo_mjc,
-                Arrays.asList("Les melons bien mûrs", "L'ananas", "La fraise rouge", "Les cerises rouges"),
-                3);
-
-        ImgQuestion imgQuestion48 = new ImgQuestion("Il",R.drawable.logo_mjc,
-                Arrays.asList("Mes jouets favoris", "Mes chemises blanches", "Mon livre preféré", "Ma veste usée"),
+        ImgQuestion imgQuestion41 = new ImgQuestion("______ peux participer à cette compétition car j'ai enfin l'âge nécessaire.",R.drawable.logo_mjc,
+                Arrays.asList("Il", "Ils", "Je", "Vous"),
                 2);
 
-        ImgQuestion imgQuestion49 = new ImgQuestion("Elle",R.drawable.logo_mjc,
-                Arrays.asList("Les échelles", "Le camion de pompier", "La grande échelle", "Les pompiers"),
-                2);
-
-        ImgQuestion imgQuestion50 = new ImgQuestion("Ils",R.drawable.logo_mjc,
-                Arrays.asList("Les moutons blancs", "Le chien du berger", "Les brebis", "La laine du mouton"),
+        ImgQuestion imgQuestion42 = new ImgQuestion("Je ______ que tu sortes le chien chaque soir.(vouloir)",R.drawable.logo_mjc,
+                Arrays.asList("Veux", "Veut", "Voulons", "Veulent"),
                 0);
 
-        ImgQuestion imgQuestion51 = new ImgQuestion("Nous",R.drawable.logo_mjc,
-                Arrays.asList("Ta mère et toi", "Son père et lui", "Sa mère et elle", "Mon père et moi"),
+        ImgQuestion imgQuestion43 = new ImgQuestion("Ne dis pas que tu ne ______ pas le faire.(pouvoir)",R.drawable.logo_mjc,
+                Arrays.asList("Peut", "Peux", "Peuvent", "Pouvons"),
+                1);
+
+        ImgQuestion imgQuestion44 = new ImgQuestion("Cet élève ______ apprendre à être autonome.(devoir)",R.drawable.logo_mjc,
+                Arrays.asList("Doivent", "Devons", "Doit", "Dois"),
+                2);
+
+        ImgQuestion imgQuestion45 = new ImgQuestion("Nous ______ offrir un voyage à nos parents.(vouloir)",R.drawable.logo_mjc,
+                Arrays.asList("Veut'", "Veux", "Voulez", "Voulons"),
                 3);
+
+        ImgQuestion imgQuestion46 = new ImgQuestion("Comment ______-vous exiger un entraînement aussi épuisant ? (pouvoir)",R.drawable.logo_mjc,
+                Arrays.asList("Pouvez", "Pouvons", "Peux", "Peuvent"),
+                0);
+
+        ImgQuestion imgQuestion47 = new ImgQuestion("______-vous des légumes et des fruits ? (vouloir)",R.drawable.logo_mjc,
+                Arrays.asList("Voulons", "Voulez", "Veulent", "Veux"),
+                1);
+
+        ImgQuestion imgQuestion48 = new ImgQuestion("Vous ______ terminer ce travail avant de sortir. (devoir)",R.drawable.logo_mjc,
+                Arrays.asList("Devons", "Dois", "Devez", "Doivent"),
+                2);
+
+        ImgQuestion imgQuestion49 = new ImgQuestion("Le directeur ______ vous voir dans son bureau. (vouloir)",R.drawable.logo_mjc,
+                Arrays.asList("Veulent", "Voulons", "Veux", "Veut"),
+                3);
+
+        ImgQuestion imgQuestion50 = new ImgQuestion("Il m'est impossible de venir cet après-midi, je ______ aller chez le dentiste. (devoir)",R.drawable.logo_mjc,
+                Arrays.asList("Dois", "Doivent", "Devont", "Devez"),
+                0);
+
+        ImgQuestion imgQuestion51 = new ImgQuestion("Les chasseurs ne ______ pas tuer le gibier toute l'année.(pouvoir)",R.drawable.logo_mjc,
+                Arrays.asList("Peut", "Peuvent", "Pouvons", "Pouvez"),
+                1);
 
 
         return new ImgBank(Arrays.asList(imgQuestion1,
@@ -534,7 +537,6 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
                 imgQuestion49,
                 imgQuestion50,
                 imgQuestion51
-
         ));
     }
 

@@ -20,8 +20,6 @@ public class ConjugaisonActivity  extends AppCompatActivity {
     private Button mPresent;
     private Button mLecon;
     private Button mVoc;
-    private Button mTBD;
-    private Button mTBD2;
     Toolbar mToolbar;
 
     @Override
@@ -37,8 +35,6 @@ public class ConjugaisonActivity  extends AppCompatActivity {
         mPresent = findViewById(R.id.present_btn);
         mLecon = findViewById(R.id.leçon_btn);
         mVoc = findViewById(R.id.voc_btn);
-        mTBD = findViewById(R.id.tbd_btn);
-        mTBD2 = findViewById(R.id.tbd2_btn);
 
         mPps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,22 +67,5 @@ public class ConjugaisonActivity  extends AppCompatActivity {
                 startActivity(VocActivityIntent);
             }
         });
-
-        mTBD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent TBDActivityIntent = new Intent(ConjugaisonActivity.this, VocActivity.class);
-                startActivity(TBDActivityIntent);
-            }
-        });
-
-        mTBD2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent TBD2ActivityIntent = new Intent(ConjugaisonActivity.this, VocActivity.class);
-                startActivity(TBD2ActivityIntent);
-            }
-        });
-
     }
 }

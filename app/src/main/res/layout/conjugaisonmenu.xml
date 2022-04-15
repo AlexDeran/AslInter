@@ -37,42 +37,42 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
 
         <Button
             android:id="@+id/pps_btn"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalicxkxq"
             android:padding="20dp"
             android:text="Les pronoms personnels sujets"
             android:textColor="@color/white"
-            android:textSize="13sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/present_btn"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="60dp"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalic9aqb"
             android:padding="20dp"
             android:text="Le présent"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="26sp"
             android:layout_marginLeft="100dp" />
 
         <Button
             android:id="@+id/test_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="60dp"
             android:textSize="16sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
@@ -82,7 +82,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
@@ -91,39 +91,39 @@
             android:id="@+id/leçon_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:textSize="16sp"
+            android:textSize="30sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Fiches leçons ??"
+            android:text="TBD"
             />
 
         <Button
             android:id="@+id/voc_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="60dp"
             android:textSize="16sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
             android:text="Vocabulaire"
-            android:layout_marginLeft="100dp" />
+            android:layout_marginLeft="60dp" />
 
         <Button
             android:id="@+id/test2_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="60dp"
             android:textSize="16sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
             android:text="Vocabulaire"
-            android:layout_marginLeft="100dp" />
+            android:layout_marginLeft="60dp" />
 
     </LinearLayout>
 
@@ -172,188 +172,5 @@
             android:text="TBD"
             android:layout_marginLeft="100dp" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd7_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            />
-
-        <Button
-            android:id="@+id/test8_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-
-        <Button
-            android:id="@+id/tbd9_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd10_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            />
-
-        <Button
-            android:id="@+id/test11_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-
-        <Button
-            android:id="@+id/tbd12_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd13_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            />
-
-        <Button
-            android:id="@+id/test14_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-
-        <Button
-            android:id="@+id/tbd15_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            />
-
-        <Button
-            android:id="@+id/test3_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-
-        <Button
-            android:id="@+id/tbd2_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-    </LinearLayout>
-
 
 </LinearLayout>

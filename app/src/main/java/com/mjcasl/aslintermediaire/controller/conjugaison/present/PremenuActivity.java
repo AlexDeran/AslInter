@@ -13,8 +13,10 @@ public class PremenuActivity extends AppCompatActivity {
     private Button mExPre1;
     private Button mExPre2;
     private Button mExPre3;
-    private Button mExPre4;
-    private Button mExPre5;
+    private Button mExEtreAvoir;
+    private Button mExAller;
+    private Button mExDevoirPouvoirVouloir;
+    private Button mExVenir;
     private Button mQuizFinal;
 
     Toolbar mToolbar;
@@ -31,8 +33,10 @@ public class PremenuActivity extends AppCompatActivity {
         mExPre1 = findViewById(R.id.exPre1_btn);
         mExPre2 = findViewById(R.id.exPre2_btn);
         mExPre3 = findViewById(R.id.exPre3_btn);
-        mExPre4 = findViewById(R.id.exPre4_btn);
-        mExPre5 = findViewById(R.id.exPre5_btn);
+        mExEtreAvoir = findViewById(R.id.exEtreAvoir_btn);
+        mExAller = findViewById(R.id.exAller_btn);
+        mExDevoirPouvoirVouloir = findViewById(R.id.exDevoirVouloirPouvoir_btn);
+        mExVenir = findViewById(R.id.exVenir_btn);
         mQuizFinal = findViewById(R.id.quizfinalPre_btn);
 
         mExPre1.setOnClickListener(new View.OnClickListener() {
@@ -59,19 +63,35 @@ public class PremenuActivity extends AppCompatActivity {
             }
         });
 
-        mExPre4.setOnClickListener(new View.OnClickListener() {
+        mExEtreAvoir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent PreActivity4Intent = new Intent(PremenuActivity.this, Ex4preActivity.class);
+                Intent PreActivity4Intent = new Intent(PremenuActivity.this, EtreAvoirActivity.class);
                 startActivity(PreActivity4Intent);
             }
         });
 
-        mExPre5.setOnClickListener(new View.OnClickListener() {
+        mExAller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent PreActivity5Intent = new Intent(PremenuActivity.this, Ex5preActivity.class);
+                Intent PreActivity5Intent = new Intent(PremenuActivity.this, AllerActivity.class);
                 startActivity(PreActivity5Intent);
+            }
+        });
+
+        mExDevoirPouvoirVouloir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent PreActivity6Intent = new Intent(PremenuActivity.this, PresentDevoirPVActivity.class);
+                startActivity(PreActivity6Intent);
+            }
+        });
+
+        mExVenir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent PreActivity7Intent = new Intent(PremenuActivity.this, PresentVenirActivity.class);
+                startActivity(PreActivity7Intent);
             }
         });
 

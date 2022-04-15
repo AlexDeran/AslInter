@@ -25,15 +25,15 @@ import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 
-public class Ex3preActivity extends AppCompatActivity implements View.OnClickListener {
+public class EtreAvoirActivity extends AppCompatActivity implements View.OnClickListener {
 
     //public static final long COUNTDOWN_IN_MILLIS = 11000;
 
-    private TextView mPreQuestion;
-    private Button mPreAnswer1;
-    private Button mPreAnswer2;
-    private Button mPreAnswer3;
-    private Button mPreAnswer4;
+    private TextView mpreQuestion;
+    private Button mpreAnswer1;
+    private Button mpreAnswer2;
+    private Button mpreAnswer3;
+    private Button mpreAnswer4;
     private ImageView mImage;
 
     private TextView mScoreDisplay;
@@ -58,7 +58,7 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expresent3);
+        setContentView(R.layout.exetreavoir);
 
 
         mImgBank = this.generateQuestions();
@@ -75,27 +75,27 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
 
         mEnableTouchEvents = true;
 
-        mPreQuestion = findViewById(R.id.Pre_question_txt);
-        mPreAnswer1 = findViewById(R.id.Pre_answer1_btn);
-        mPreAnswer2 = findViewById(R.id.Pre_answer2_btn);
-        mPreAnswer3 = findViewById(R.id.Pre_answer3_btn);
-        mPreAnswer4 = findViewById(R.id.Pre_answer4_btn);
-        mImage = findViewById(R.id.Pre_image);
+        mpreQuestion = findViewById(R.id.pre_question_txt);
+        mpreAnswer1 = findViewById(R.id.pre_answer1_btn);
+        mpreAnswer2 = findViewById(R.id.pre_answer2_btn);
+        mpreAnswer3 = findViewById(R.id.pre_answer3_btn);
+        mpreAnswer4 = findViewById(R.id.pre_answer4_btn);
+        mImage = findViewById(R.id.pre_image);
 
-        mScoreDisplay = findViewById(R.id.Pre_score);
+        mScoreDisplay = findViewById(R.id.pre_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mProgressBar =findViewById(R.id.Pre_progress_bar);
+        mProgressBar =findViewById(R.id.pre_progress_bar);
 
         // Use the tag property to 'name' the buttons
-        mPreAnswer1.setTag(0);
-        mPreAnswer2.setTag(1);
-        mPreAnswer3.setTag(2);
-        mPreAnswer4.setTag(3);
+        mpreAnswer1.setTag(0);
+        mpreAnswer2.setTag(1);
+        mpreAnswer3.setTag(2);
+        mpreAnswer4.setTag(3);
 
-        mPreAnswer1.setOnClickListener(this);
-        mPreAnswer2.setOnClickListener(this);
-        mPreAnswer3.setOnClickListener(this);
-        mPreAnswer4.setOnClickListener(this);
+        mpreAnswer1.setOnClickListener(this);
+        mpreAnswer2.setOnClickListener(this);
+        mpreAnswer3.setOnClickListener(this);
+        mpreAnswer4.setOnClickListener(this);
 
         mImgQuestion = mImgBank.getImgQuestion();
         this.displayQuestion(mImgQuestion);
@@ -120,10 +120,10 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         int responseIndex = (int) v.getTag();
-        int taganswer1 = (int) mPreAnswer1.getTag();
-        int taganswer2 = (int) mPreAnswer2.getTag();
-        int taganswer3 = (int) mPreAnswer3.getTag();
-        int taganswer4 = (int) mPreAnswer4.getTag();
+        int taganswer1 = (int) mpreAnswer1.getTag();
+        int taganswer2 = (int) mpreAnswer2.getTag();
+        int taganswer3 = (int) mpreAnswer3.getTag();
+        int taganswer4 = (int) mpreAnswer4.getTag();
 
         if(responseIndex == mImgQuestion.getAnswerIndex()){
             // Bon
@@ -143,20 +143,20 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
             v.setBackgroundColor(Color.parseColor("#830000"));
 
             if(taganswer1 == mImgQuestion.getAnswerIndex()){
-                mPreAnswer1.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
             else if(taganswer2 == mImgQuestion.getAnswerIndex()){
-                mPreAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
+                mpreAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
             else if(taganswer3 == mImgQuestion.getAnswerIndex()){
-                mPreAnswer3.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
             else if(taganswer4 == mImgQuestion.getAnswerIndex()){
-                mPreAnswer4.setBackgroundColor(Color.parseColor("#008000"));
+                mpreAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
 
@@ -180,10 +180,10 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
 
                     mProgressBar.setProgress(mQuestionCounter);
 
-                    mPreAnswer1.setBackgroundColor(Color.parseColor("#000000"));
-                    mPreAnswer2.setBackgroundColor(Color.parseColor("#000000"));
-                    mPreAnswer3.setBackgroundColor(Color.parseColor("#000000"));
-                    mPreAnswer4.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer1.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer2.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer3.setBackgroundColor(Color.parseColor("#000000"));
+                    mpreAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
         }, 2000);
@@ -213,61 +213,62 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void displayQuestion(final ImgQuestion imgQuestion) {
-        mPreQuestion.setText(imgQuestion.getImgQuestion());
+        mpreQuestion.setText(imgQuestion.getImgQuestion());
         mImage.setImageResource(imgQuestion.getImage());
-        mPreAnswer1.setText(imgQuestion.getChoiceList().get(0));
-        mPreAnswer2.setText(imgQuestion.getChoiceList().get(1));
-        mPreAnswer3.setText(imgQuestion.getChoiceList().get(2));
-        mPreAnswer4.setText(imgQuestion.getChoiceList().get(3));
+        mpreAnswer1.setText(imgQuestion.getChoiceList().get(0));
+        mpreAnswer2.setText(imgQuestion.getChoiceList().get(1));
+        mpreAnswer3.setText(imgQuestion.getChoiceList().get(2));
+        mpreAnswer4.setText(imgQuestion.getChoiceList().get(3));
     }
 
     private ImgBank generateQuestions() {
-        ImgQuestion imgQuestion1 = new ImgQuestion("Lucas (marcher) en écoutant de la musique.", R.drawable.lucas,
-                Arrays.asList("Marches", "Marche", "Marchent", "Marchons"), 2);
-
-        ImgQuestion imgQuestion2 = new ImgQuestion("Mes parents et moi (passer) de bonnes vacances." ,R.drawable.parents,
-                Arrays.asList("Passent", "Passons", "Passez", "Passe"),
+        ImgQuestion imgQuestion1 = new ImgQuestion("Tu ______ meilleur que moi aux échecs.", R.drawable.echecs,
+                Arrays.asList("Sont", "Es", "As", "Avons"),
                 1);
 
-        ImgQuestion imgQuestion3 = new ImgQuestion("Théo et Jessica (aimer) jouer au Tennis.",R.drawable.theojessica,
-                Arrays.asList("Aime", "Aimes", "Aiment", "Aimez"),
+        ImgQuestion imgQuestion2 = new ImgQuestion("Je ______ bon cavalier.",R.drawable.cavalier,
+                Arrays.asList("Sommes", "Avons", "Suis", "Ont"),
                 2);
 
-        ImgQuestion imgQuestion4 = new ImgQuestion("Ton papa et toi (planter) un petit arbre.",R.drawable.papamoi,
-                Arrays.asList("Plantes", "Plantez", "Plantent", "Plantons"),
-                1);
+        ImgQuestion imgQuestion3 = new ImgQuestion("Vous ______ perdu, Monsieur ?",R.drawable.perdu,
+                Arrays.asList("Avez", "A", "Êtes", "Est"),
+                2);
 
-        ImgQuestion imgQuestion5 = new ImgQuestion("Tu (travailler) sur ordinateur.",R.drawable.travailordi,
-                Arrays.asList("Travaille", "Travailles", "Travaillent", "Travaillons"),
-                1);
-
-        ImgQuestion imgQuestion6 = new ImgQuestion("Les fleurs (pousser) au printemps",R.drawable.fleurs,
-                Arrays.asList("Poussent", "Pousse", "Poussons", "Poussez"),
-                0);
-
-        ImgQuestion imgQuestion7 = new ImgQuestion(" Nous (acheter) des bonbons.",R.drawable.bonbons,
-                Arrays.asList("Achetons", "Achètes", "Achètent", "Achetez"),
-                0);
-
-        ImgQuestion imgQuestion8 = new ImgQuestion("Vous (jouer) aux cartes.",R.drawable.cartes,
-                Arrays.asList("Joue", "Joues", "Jouons", "Jouez"),
+        ImgQuestion imgQuestion4 = new ImgQuestion("Nous ______ des jumelles.",R.drawable.jumelles,
+                Arrays.asList("Avez", "Avons", "Êtes", "Sommes"),
                 3);
 
-        ImgQuestion imgQuestion9 = new ImgQuestion("Mes amis (arriver) à l'école",R.drawable.amis,
-                Arrays.asList("Arrive", "Arrivent", "Arrivons", "Arrivez"),
-                1);
-
-        ImgQuestion imgQuestion10 = new ImgQuestion("Tu (chanter) trop fort.",R.drawable.chanteur,
-                Arrays.asList("Chantons", "Chante", "Chantes", "Chantez"),
+        ImgQuestion imgQuestion5 = new ImgQuestion("Les étoiles ______ loin dans le ciel.",R.drawable.etoiles,
+                Arrays.asList("Est", "As", "Sont", "Ont"),
                 2);
 
-        ImgQuestion imgQuestion11 = new ImgQuestion("Ma cousine (écouter) de la musique",R.drawable.cousine,
-                Arrays.asList("Écoute", "Écoutes", "Écoutons", "Écoutent"),
+        ImgQuestion imgQuestion6 = new ImgQuestion("Le lionceau ______ le petit du lion.",R.drawable.lionceau,
+                Arrays.asList("A", "As", "Es", "Est"),
+                3);
+
+        ImgQuestion imgQuestion7 = new ImgQuestion("Nous ______ un train à prendre.",R.drawable.train,
+                Arrays.asList("Est", "Ont", "Avons", "Sommes"),
+                2);
+
+        ImgQuestion imgQuestion8 = new ImgQuestion("L'éléphant ______ des oreilles énormes.",R.drawable.elephant,
+                Arrays.asList("Ont", "Est", "A", "Sont"),
+                2);
+
+        ImgQuestion imgQuestion9 = new ImgQuestion("Vous ______ une belle voiture rouge",R.drawable.voiture,
+                Arrays.asList("Ont", "Avez", "Est", "Suis"),
+                1);
+
+        ImgQuestion imgQuestion10 = new ImgQuestion("Les enfants ______ peur du loup.",R.drawable.loup2,
+                Arrays.asList("Sont", "Est", "Avons", "Ont"),
+                3);
+
+        ImgQuestion imgQuestion11 = new ImgQuestion("J'______ un bouton sur la joue.",R.drawable.bouton,
+                Arrays.asList("Ai", "As", "Es", "Suis"),
                 0);
 
-        ImgQuestion imgQuestion12 = new ImgQuestion("Je (terminer) mon travail.",R.drawable.travail,
-                Arrays.asList("Termines", "Termine", "Terminent", "Terminons"),
-                1);
+        ImgQuestion imgQuestion12 = new ImgQuestion("Tu ______ cinq ans aujourd'hui.",R.drawable.cinqans,
+                Arrays.asList("Es", "Est", "A", "As"),
+                3);
 
 
         return new ImgBank(Arrays.asList(imgQuestion1,

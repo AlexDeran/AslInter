@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp">
 
         <TextView
             android:id="@+id/Title"
@@ -88,7 +88,7 @@
         android:layout_marginBottom="30dp">
 
         <Button
-            android:id="@+id/exPre4_btn"
+            android:id="@+id/exEtreAvoir_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
             android:layout_width="380dp"
@@ -96,11 +96,11 @@
             android:textSize="40sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Exercice 4"
+            android:text="Être et Avoir"
             />
 
         <Button
-            android:id="@+id/exPre5_btn"
+            android:id="@+id/exAller_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
             android:layout_width="380dp"
@@ -108,7 +108,40 @@
             android:textSize="40sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Exercice 5"
+            android:text="Aller"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/exDevoirVouloirPouvoir_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Vouloir, Pouvoir et DEvoir"
+            />
+
+        <Button
+            android:id="@+id/exVenir_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Venir"
             android:layout_marginLeft="10dp" />
 
     </LinearLayout>

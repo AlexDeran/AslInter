@@ -270,34 +270,6 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Coupe", "Coupes", "Coupent", "Coupez"),
                 0);
 
-        ImgQuestion imgQuestion13 = new ImgQuestion("Les fleurs (pousser) au printemps",R.drawable.fleurs,
-                Arrays.asList("Poussent", "Pousse", "Poussons", "Poussez"),
-                0);
-
-        ImgQuestion imgQuestion14 = new ImgQuestion(" Nous (acheter) des bonbons.",R.drawable.bonbons,
-                Arrays.asList("Achetons", "Achètes", "Achètent", "Achetez"),
-                3);
-
-        ImgQuestion imgQuestion15 = new ImgQuestion("Vous (jouer) aux cartes.",R.drawable.cartes,
-                Arrays.asList("Joue", "Joues", "Jouons", "Jouez"),
-                3);
-
-        ImgQuestion imgQuestion16 = new ImgQuestion("Mes amis (arriver) à l'école",R.drawable.amis,
-                Arrays.asList("Arrive", "Arrivent", "Arrivons", "Arrivez"),
-                1);
-
-        ImgQuestion imgQuestion17 = new ImgQuestion("Tu (chanter) trop fort.",R.drawable.chanteur,
-                Arrays.asList("Chantons", "Chante", "Chantes", "Chantez"),
-                2);
-
-        ImgQuestion imgQuestion18 = new ImgQuestion("Ma cousine (écouter) de la musique",R.drawable.cousine,
-                Arrays.asList("Écoute", "Écoutes", "Écoutons", "Écoutent"),
-                0);
-
-        ImgQuestion imgQuestion19 = new ImgQuestion("Je (terminer) mon travail.",R.drawable.travail,
-                Arrays.asList("Termines", "Termine", "Terminent", "Terminons"),
-                1);
-
 
         return new ImgBank(Arrays.asList(imgQuestion1,
                 imgQuestion2,
@@ -310,15 +282,7 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
                 imgQuestion9,
                 imgQuestion10,
                 imgQuestion11,
-                imgQuestion12,
-                imgQuestion13,
-                imgQuestion14,
-                imgQuestion15,
-                imgQuestion16,
-                imgQuestion17,
-                imgQuestion18,
-                imgQuestion19
-
+                imgQuestion12
         ));
     }
 }

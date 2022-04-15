@@ -25,7 +25,7 @@ import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class Ex1preActivity extends AppCompatActivity implements View.OnClickListener {
+public class PresentDevoirPVActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
@@ -57,7 +57,7 @@ public class Ex1preActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expresent1);
+        setContentView(R.layout.exdevoirpv);
 
 
         mQuestionBank = this.generateQuestions();
@@ -219,69 +219,61 @@ public class Ex1preActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private QuestionBank generateQuestions() {
-        Question Question1 = new Question("______ félicitons le gagnant de la course.",
-                Arrays.asList("Je", "Nous", "Tu", "Il"),
+        Question Question1 = new Question("Je ______ que tu sortes le chien chaque soir.(vouloir)",
+                Arrays.asList("Veux", "Veut", "Voulons", "Veulent"),
+                0);
+
+        Question Question2 = new Question("Ne dis pas que tu ne ______ pas le faire.(pouvoir)",
+                Arrays.asList("Peut", "Peux", "Peuvent", "Pouvons"),
                 1);
 
-        Question Question2 = new Question("______ adore les dauphins et Harry Potter.",
-                Arrays.asList("Nous", "Vous", "Ils", "J'"),
-                3);
-
-        Question Question3 = new Question("______ prennent place sur la ligne de départ.",
-                Arrays.asList("Nous", "Il", "Tu", "Ils"),
-                3);
-
-        Question Question4 = new Question("______ applaudis tous les participants.",
-                Arrays.asList("J'", "Vous", "Elle", "Nous"),
-                0);
-
-        Question Question5 = new Question("______ poursuivez les prisonniers qui se sont échappés.",
-                Arrays.asList("Je", "Tu", "Nous", "Vous"),
-                3);
-
-        Question Question6 = new Question("______ pratiquent la gymnastique depuis plusieurs années.",
-                Arrays.asList("Ils", "Je", "Nous", "Elle"),
-                0);
-
-        Question Question7 = new Question("______ accordes beaucoup trop d'importance à cette nouvelle.",
-                Arrays.asList("Je", "Nous", "Tu", "Ils"),
+        Question Question3 = new Question("Cet élève ______ apprendre à être autonome.(devoir)",
+                Arrays.asList("Doivent", "Devons", "Doit", "Dois"),
                 2);
 
-        Question Question8 = new Question("______ fleuri au printemps.",
-                Arrays.asList("Les capucines", "Le lilas", "Les violettes", "Les roses"),
-                1);
-
-        Question Question9 = new Question("______ crient très fort quand ______ jouent.",
-                Arrays.asList("Il", "Ils", "Je", "Vous"),
-                1);
-
-        Question Question10 = new Question("______ peux participer à cette compétition car j'ai enfin l'âge nécessaire.",
-                Arrays.asList("Il", "Ils", "Je", "Vous"),
-                2);
-
-        Question Question11 = new Question("______ bavarde avec un ami.",
-                Arrays.asList("Je", "Tu", "Nous", "Vous"),
-                0);
-
-        Question Question12 = new Question("______ envoyez une lettre.",
-                Arrays.asList("Tu", "Ils", "Je", "Vous"),
+        Question Question4 = new Question("Nous ______ offrir un voyage à nos parents.(vouloir)",
+                Arrays.asList("Veut'", "Veux", "Voulez", "Voulons"),
                 3);
 
-        Question Question13 = new Question("______ regardent la télévision.",
-                Arrays.asList("Il", "Ils", "Je", "Vous"),
-                1);
-
-        Question Question14 = new Question("______ porte un pantalon bleu.",
-                Arrays.asList("Il", "Nous", "Tu", "Vous"),
+        Question Question5 = new Question("Comment ______-vous exiger un entraînement aussi épuisant ? (pouvoir)",
+                Arrays.asList("Pouvez", "Pouvons", "Peux", "Peuvent"),
                 0);
 
-        Question Question15 = new Question("______ achetons des bonbons.",
-                Arrays.asList("Tu", "Nous", "Elle", "Vous"),
+        Question Question6 = new Question("______-vous des légumes et des fruits ? (vouloir)",
+                Arrays.asList("Voulons", "Voulez", "Veulent", "Veux"),
                 1);
 
-        Question Question16 = new Question("______ laves la voiture.",
-                Arrays.asList("Tu", "Nous", "Je", "Elles"),
+        Question Question7 = new Question("Vous ______ terminer ce travail avant de sortir. (devoir)",
+                Arrays.asList("Devons", "Dois", "Devez", "Doivent"),
+                2);
+
+        Question Question8 = new Question("Le directeur ______ vous voir dans son bureau. (vouloir)",
+                Arrays.asList("Veulent", "Voulons", "Veux", "Veut"),
+                3);
+
+        Question Question9 = new Question("Il m'est impossible de venir cet après-midi, je ______ aller chez le dentiste. (devoir)",
+                Arrays.asList("Dois", "Doivent", "Devont", "Devez"),
                 0);
+
+        Question Question10 = new Question("Les chasseurs ne ______ pas tuer le gibier toute l'année.(pouvoir)",
+                Arrays.asList("Peut", "Peuvent", "Pouvons", "Pouvez"),
+                1);
+
+        Question Question11 = new Question("Nous ______ faire tout notre possible pour être de retour avant la tombée de la nuit.(devoir)",
+                Arrays.asList("Dois", "Devez", "Devons", "Doivent"),
+                2);
+
+        Question Question12 = new Question("Tous les voisins ______ organiser une fête en l'honneur de René, vainqueur de la course.(vouloir)",
+                Arrays.asList("Veut", "Veux", "Voulons", "Veulent"),
+                3);
+
+        Question Question13 = new Question("Nous ______ nous rencontrer dans la salle des fêtes. (pouvoir)",
+                Arrays.asList("Pouvons", "Pouvez", "Peuvent", "Peux"),
+                0);
+
+        Question Question14 = new Question(" Les organisateurs de la fête ______ demander l'autorisation au maire pour occuper des locaux publics. (devoir)",
+                Arrays.asList("Dois", "Doivent", "Devons", "Devez"),
+                1);
 
         return new QuestionBank(Arrays.asList(Question1,
                 Question2,
@@ -296,9 +288,7 @@ public class Ex1preActivity extends AppCompatActivity implements View.OnClickLis
                 Question11,
                 Question12,
                 Question13,
-                Question14,
-                Question15,
-                Question16
+                Question14
         ));
     }
 }

@@ -153,7 +153,7 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.present.Ex4preActivity"
+            android:name=".controller.conjugaison.present.EtreAvoirActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -161,7 +161,23 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.present.Ex5preActivity"
+            android:name=".controller.conjugaison.present.AllerActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.PresentDevoirPVActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.present.PresentVenirActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
