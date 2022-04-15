@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/turquoise"
+    tools:context="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity">
+
+    <include
+        android:id="@+id/asl_toolbar"
+        layout="@layout/actionbarmain">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Le Présent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/black"
+            android:textSize="150dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/premiergpe_btn"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/librebodonibolditalicxkxq"
+            android:padding="10dp"
+            android:text="Verbes du Premier Groupe"
+            android:textColor="@color/white"
+            android:textSize="31sp" />
+
+        <Button
+            android:id="@+id/deuxiemegpe_btn"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:padding="10dp"
+            android:text="Verbes du Second Groupe"
+            android:textColor="@color/white"
+            android:textSize="31sp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:id="@+id/trosiemegpe_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textSize="31sp"
+            android:padding="10dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Verbes du Troisième Groupe"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/exEtreAvoir_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Être et Avoir"
+            />
+
+        <Button
+            android:id="@+id/exAller_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Le verbe Aller"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/exDevoirVouloirPouvoir_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="38sp"
+            android:padding="10dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Vouloir, Pouvoir et DEvoir"
+            />
+
+        <Button
+            android:id="@+id/exVenir_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Le verbe Venir"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+    <?xml version="1.0" encoding="utf-8"?>

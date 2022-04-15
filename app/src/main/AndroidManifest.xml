@@ -34,6 +34,46 @@
         </activity>
 
         <activity
+            android:name=".controller.lecon.present.LeconPresentMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.lecon.present.PremierGpeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.lecon.present.LeconEtreAvoirActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.lecon.present.LeconAllerActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.lecon.present.LeconVenirActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
             android:exported="true"
             android:name="com.mjcasl.aslintermediaire.controller.SplashScreenActivity"
             android:screenOrientation="portrait"

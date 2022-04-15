@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
 import com.mjcasl.aslintermediaire.controller.lecon.pps.LeconPpsActivity;
+import com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
 ;
@@ -18,7 +19,7 @@ import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
 public class LeconMenuActivity extends AppCompatActivity {
     private Button mPPS;
-    private Button mGram;
+    private Button mPresent;
     private Button mLecon;
     private Button mVoc;
     private Button mTBD;
@@ -35,7 +36,7 @@ public class LeconMenuActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mPPS = findViewById(R.id.pps_btn);
-        mGram = findViewById(R.id.gram_btn);
+        mPresent = findViewById(R.id.present_btn);
         mLecon = findViewById(R.id.leçon_btn);
         mVoc = findViewById(R.id.voc_btn);
         mTBD = findViewById(R.id.tbd_btn);
@@ -49,11 +50,11 @@ public class LeconMenuActivity extends AppCompatActivity {
             }
         });
 
-        mGram.setOnClickListener(new View.OnClickListener() {
+        mPresent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent GramActivityIntent = new Intent(LeconMenuActivity.this, GramActivity.class);
-                startActivity(GramActivityIntent);
+                Intent PresentActivityIntent = new Intent(LeconMenuActivity.this, LeconPresentMenuActivity.class);
+                startActivity(PresentActivityIntent);
             }
         });
 
