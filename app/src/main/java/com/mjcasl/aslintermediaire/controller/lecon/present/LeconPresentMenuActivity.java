@@ -50,7 +50,7 @@ public class LeconPresentMenuActivity extends AppCompatActivity {
         m2ndGpe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent DeuxiemeGpeActivityIntent = new Intent(LeconPresentMenuActivity.this, LeconPresentMenuActivity.class);
+                Intent DeuxiemeGpeActivityIntent = new Intent(LeconPresentMenuActivity.this, SecondGpeActivity.class);
                 startActivity(DeuxiemeGpeActivityIntent);
             }
         });
@@ -58,7 +58,7 @@ public class LeconPresentMenuActivity extends AppCompatActivity {
         m3emeGpe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent TroisiemeGpeActivityIntent = new Intent(LeconPresentMenuActivity.this, VocActivity.class);
+                Intent TroisiemeGpeActivityIntent = new Intent(LeconPresentMenuActivity.this, TroisiemeGpeActivity.class);
                 startActivity(TroisiemeGpeActivityIntent);
             }
         });
@@ -82,7 +82,7 @@ public class LeconPresentMenuActivity extends AppCompatActivity {
         mDevoirPvVouloir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent DPVActivityIntent = new Intent(LeconPresentMenuActivity.this, VocActivity.class);
+                Intent DPVActivityIntent = new Intent(LeconPresentMenuActivity.this, LeconDevoirPVActivity.class);
                 startActivity(DPVActivityIntent);
             }
         });

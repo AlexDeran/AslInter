@@ -269,6 +269,29 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Termines", "Termine", "Terminent", "Terminons"),
                 1);
 
+        ImgQuestion imgQuestion13 = new ImgQuestion("Joey (choisir) toujours des vêtements qui lui vont à merveille !",R.drawable.logo_mjc,
+                Arrays.asList("Choisi", "Choisis", "Choissient", "Choisit"),
+                3);
+
+        ImgQuestion imgQuestion14 = new ImgQuestion("Nous (accomplir) notre travail avec dextérité.",R.drawable.logo_mjc,
+                Arrays.asList("Accomplissent", "Accomplissons", "Accomplit", "Accomplis"),
+                1);
+
+        ImgQuestion imgQuestion15 = new ImgQuestion("Dans les films, le héros (surgir) généralement de nulle part pour sauver sa bien-aimée.",R.drawable.logo_mjc,
+                Arrays.asList("Surgissons", "Surgissez", "Surgit", "Surgis"),
+                2);
+
+        ImgQuestion imgQuestion16 = new ImgQuestion("Je (s'épanouir) dans cet environnement.",R.drawable.logo_mjc,
+                Arrays.asList("M'épanouis", "S'épanouis", "S'épanouit", "M'épanouit"),
+                0);
+
+        ImgQuestion imgQuestion17 = new ImgQuestion("Mes grands-parents nous (réunir) chaque année.",R.drawable.logo_mjc,
+                Arrays.asList("Réunis", "Réunissent", "Réunit", "Réunissons"),
+                1);
+
+        ImgQuestion imgQuestion18 = new ImgQuestion(" Nous (enrichir) notre vocabulaire en lisant le journal.",R.drawable.logo_mjc,
+                Arrays.asList("Enrichis", "Enrichissez", "Enrichissent", "Enrichissons"),
+                3);
 
         return new ImgBank(Arrays.asList(imgQuestion1,
                 imgQuestion2,
@@ -281,7 +304,13 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
                 imgQuestion9,
                 imgQuestion10,
                 imgQuestion11,
-                imgQuestion12
+                imgQuestion12,
+                imgQuestion13,
+                imgQuestion14,
+                imgQuestion15,
+                imgQuestion16,
+                imgQuestion17,
+                imgQuestion18
         ));
     }
 }

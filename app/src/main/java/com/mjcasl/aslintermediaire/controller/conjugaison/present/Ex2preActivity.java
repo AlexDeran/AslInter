@@ -250,7 +250,7 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Prépares", "Prépare", "Préparent", "Préparez"),
                 1);
 
-        ImgQuestion imgQuestion8 = new ImgQuestion("Nous (colorier) notre dessin",R.drawable.dessin,
+        ImgQuestion imgQuestion8 = new ImgQuestion("Nous (colorier) notre dessin.",R.drawable.dessin,
                 Arrays.asList("Colorons", "Coloriez", "Colories", "Colorie"),
                 0);
 
@@ -270,6 +270,30 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Coupe", "Coupes", "Coupent", "Coupez"),
                 0);
 
+        ImgQuestion imgQuestion13 = new ImgQuestion("Mona et Shanna (grandir) vite !",R.drawable.logo_mjc,
+                Arrays.asList("Grandis", "Grandit", "Grandissent", "Grandissons"),
+                2);
+
+        ImgQuestion imgQuestion14 = new ImgQuestion("Jack (maigrir) beaucoup depuis quelque temps.",R.drawable.logo_mjc,
+                Arrays.asList("Maigrissent", "Maigris", "Maigrit", "Maigrissez"),
+                2);
+
+        ImgQuestion imgQuestion15 = new ImgQuestion("Tu (rougir) chaque fois que tu parles en public.",R.drawable.logo_mjc,
+                Arrays.asList("Rougissent", "Rougissez", "Rougis", "Rougissons"),
+                2);
+
+        ImgQuestion imgQuestion16 = new ImgQuestion(" Mes enfants (bondir) de joie quand je leur donne des bonbons au chocolat.",R.drawable.logo_mjc,
+                Arrays.asList("Bondis", "Bondit", "Bondissons", "Bondissent"),
+                3);
+
+        ImgQuestion imgQuestion17 = new ImgQuestion("Je (brandir) haut le drapeau de mon pays.",R.drawable.logo_mjc,
+                Arrays.asList("Brandis", "Brandit", "Brandissent", "Brandissons"),
+                0);
+
+        ImgQuestion imgQuestion18 = new ImgQuestion("Vous (jouir) d'avantages dont je suis jalouse !",R.drawable.logo_mjc,
+                Arrays.asList("Jouissent", "Jouit", "Jouissez", "Jouis"),
+                2);
+
 
         return new ImgBank(Arrays.asList(imgQuestion1,
                 imgQuestion2,
@@ -282,7 +306,13 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
                 imgQuestion9,
                 imgQuestion10,
                 imgQuestion11,
-                imgQuestion12
+                imgQuestion12,
+                imgQuestion13,
+                imgQuestion14,
+                imgQuestion15,
+                imgQuestion16,
+                imgQuestion17,
+                imgQuestion18
         ));
     }
 }

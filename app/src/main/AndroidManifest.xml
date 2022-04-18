@@ -50,6 +50,22 @@
         </activity>
 
         <activity
+            android:name=".controller.lecon.present.SecondGpeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.lecon.present.TroisiemeGpeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
             android:name=".controller.lecon.present.LeconEtreAvoirActivity"
             android:screenOrientation="portrait">
             <meta-data
@@ -74,6 +90,14 @@
         </activity>
 
         <activity
+            android:name=".controller.lecon.present.LeconDevoirPVActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
+        </activity>
+
+        <activity
             android:exported="true"
             android:name="com.mjcasl.aslintermediaire.controller.SplashScreenActivity"
             android:screenOrientation="portrait"
@@ -90,7 +114,6 @@
             <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
-
         </activity>
 
         <activity
