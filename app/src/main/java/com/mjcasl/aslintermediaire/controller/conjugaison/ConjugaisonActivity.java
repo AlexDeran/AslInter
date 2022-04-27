@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.mjcasl.aslintermediaire.R;
+import com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity;
-import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
 import com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 
@@ -18,8 +18,8 @@ import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 public class ConjugaisonActivity  extends AppCompatActivity {
     private Button mPps;
     private Button mPresent;
-    private Button mLecon;
-    private Button mVoc;
+    private Button mImparfait;
+    private Button mPC;
     Toolbar mToolbar;
 
     @Override
@@ -33,8 +33,8 @@ public class ConjugaisonActivity  extends AppCompatActivity {
 
         mPps = findViewById(R.id.pps_btn);
         mPresent = findViewById(R.id.present_btn);
-        mLecon = findViewById(R.id.leçon_btn);
-        mVoc = findViewById(R.id.voc_btn);
+        mImparfait = findViewById(R.id.imparfait_btn);
+        mPC = findViewById(R.id.pc_btn);
 
         mPps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,19 +52,19 @@ public class ConjugaisonActivity  extends AppCompatActivity {
             }
         });
 
-        mLecon.setOnClickListener(new View.OnClickListener() {
+        mImparfait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent LeconActivityIntent = new Intent(ConjugaisonActivity.this, LeconMenuActivity.class);
-                startActivity(LeconActivityIntent);
+                Intent ImparfaitActivityIntent = new Intent(ConjugaisonActivity.this, ImparfaitMenuActivity.class);
+                startActivity(ImparfaitActivityIntent);
             }
         });
 
-        mVoc.setOnClickListener(new View.OnClickListener() {
+        mPC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent VocActivityIntent = new Intent(ConjugaisonActivity.this, VocActivity.class);
-                startActivity(VocActivityIntent);
+                Intent PCActivityIntent = new Intent(ConjugaisonActivity.this, VocActivity.class);
+                startActivity(PCActivityIntent);
             }
         });
     }

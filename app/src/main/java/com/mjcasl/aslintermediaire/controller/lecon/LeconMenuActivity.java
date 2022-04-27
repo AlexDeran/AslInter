@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
 import com.mjcasl.aslintermediaire.controller.lecon.pps.LeconPpsActivity;
 import com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
@@ -20,8 +19,8 @@ import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 public class LeconMenuActivity extends AppCompatActivity {
     private Button mPPS;
     private Button mPresent;
-    private Button mLecon;
-    private Button mVoc;
+    private Button mImparfait;
+    private Button mPC;
     private Button mTBD;
     private Button mTBD2;
     Toolbar mToolbar;
@@ -37,10 +36,8 @@ public class LeconMenuActivity extends AppCompatActivity {
 
         mPPS = findViewById(R.id.pps_btn);
         mPresent = findViewById(R.id.present_btn);
-        mLecon = findViewById(R.id.leçon_btn);
-        mVoc = findViewById(R.id.voc_btn);
-        mTBD = findViewById(R.id.tbd_btn);
-        mTBD2 = findViewById(R.id.tbd2_btn);
+        mImparfait = findViewById(R.id.imparfait_btn);
+        mPC = findViewById(R.id.pc_btn);
 
         mPPS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,37 +55,20 @@ public class LeconMenuActivity extends AppCompatActivity {
             }
         });
 
-        mLecon.setOnClickListener(new View.OnClickListener() {
+        mImparfait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent LeconActivityIntent = new Intent(LeconMenuActivity.this, LeconMenuActivity.class);
-                startActivity(LeconActivityIntent);
+                Intent ImparfaitActivityIntent = new Intent(LeconMenuActivity.this, LeconMenuActivity.class);
+                startActivity(ImparfaitActivityIntent);
             }
         });
 
-        mVoc.setOnClickListener(new View.OnClickListener() {
+        mPC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent VocActivityIntent = new Intent(LeconMenuActivity.this, VocActivity.class);
-                startActivity(VocActivityIntent);
+                Intent PCActivityIntent = new Intent(LeconMenuActivity.this, VocActivity.class);
+                startActivity(PCActivityIntent);
             }
         });
-
-        mTBD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent TBDActivityIntent = new Intent(LeconMenuActivity.this, VocActivity.class);
-                startActivity(TBDActivityIntent);
-            }
-        });
-
-        mTBD2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent TBD2ActivityIntent = new Intent(LeconMenuActivity.this, VocActivity.class);
-                startActivity(TBD2ActivityIntent);
-            }
-        });
-
     }
 }

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/turquoise"
-    tools:context="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity">
+    tools:context="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity">
 
     <include
         android:id="@+id/asl_toolbar"
@@ -20,16 +20,18 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp">
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp">
 
         <TextView
             android:id="@+id/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Conjugaison"
+            android:text="L'imparfait"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:textColor="@color/black"
             android:textSize="100dp" />
 
@@ -37,139 +39,100 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
 
         <Button
-            android:id="@+id/pps_btn"
-            android:layout_width="200dp"
+            android:id="@+id/exImparfait1_btn"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalicxkxq"
             android:padding="20dp"
-            android:text="Les pronoms personnels sujets"
+            android:text="EXERCICE 1"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/present_btn"
-            android:layout_width="200dp"
+            android:id="@+id/exImparfait2_btn"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalic9aqb"
             android:padding="20dp"
-            android:text="Le présent"
+            android:text="EXERCICE 2"
             android:textColor="@color/white"
-            android:textSize="26sp"
-            android:layout_marginLeft="100dp" />
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp" />
 
         <Button
-            android:id="@+id/imparfait_btn"
+            android:id="@+id/exImparfait3_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="19sp"
+            android:textSize="30sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="L'imparfait"
-            android:layout_marginLeft="100dp" />
+            android:text="Exercice 3"
+            android:layout_marginLeft="10dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
 
         <Button
-            android:id="@+id/pc_btn"
+            android:id="@+id/exImparfait4_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:textSize="25sp"
+            android:textSize="35sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Le passé composé"/>
-
-        <Button
-            android:id="@+id/chgttps_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="17sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Changement de temps"
-            android:layout_marginLeft="60dp" />
-
-        <Button
-            android:id="@+id/test2_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Vocabulaire"
-            android:layout_marginLeft="60dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd4_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="175dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
+            android:text="Exercice 4"
             />
 
         <Button
-            android:id="@+id/test5_btn"
+            android:id="@+id/etreavoirImparfait_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
+            android:layout_marginLeft="170dp"
+            android:textSize="40sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
+            android:text="Être et Avoir"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
 
         <Button
-            android:id="@+id/tbd6_btn"
+            android:id="@+id/quizfinalImparfait_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="175dp"
+            android:layout_width="770dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="100dp"
-            android:textSize="16sp"
+            android:textSize="40sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
+            android:text="QUIZ FINAL"
+            />
     </LinearLayout>
 
 </LinearLayout>
+    <?xml version="1.0" encoding="utf-8"?>

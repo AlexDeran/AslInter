@@ -26,9 +26,14 @@
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/conjugaisonmenu.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exDevoirPV.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exEtreAvoir.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exImparfait1.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exaller.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exdevoirpv.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exetreavoir.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/eximparfait2.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/eximparfait3.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/eximparfait4.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/eximparfaitEA.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/expps1.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/expps2.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/expps3.xml" value="0.12708333333333333" />
@@ -40,10 +45,12 @@
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/expresent2.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/expresent3.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/exvenir.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/imparfaitmenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/lecon.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconaller.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/lecondevoirpv.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconetreavoir.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconmenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconmenu.xml" value="0.1" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconpps.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconpremiergpe.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconpresentmenu.xml" value="0.12708333333333333" />
@@ -51,6 +58,7 @@
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/lecontroisiemegpe.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/leconvenir.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/premenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/qfimparfait.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/qfpps.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/layout/qfpresent.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Alexandre/AndroidStudioProjects/ASLintermdiaire/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1245" />

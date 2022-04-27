@@ -142,6 +142,63 @@
             android:screenOrientation="portrait"/>
 
         <activity
+            android:name=".controller.conjugaison.imparfait.Ex1ImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.ImparfaitMenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.Ex2ImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.Ex3ImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.Ex4ImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.ExEtreAvoirImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.imparfait.QFImparfaitActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
+        </activity>
+
+        <activity
             android:name=".controller.conjugaison.pps.Ex1ppsActivity"
             android:screenOrientation="portrait">
             <meta-data
