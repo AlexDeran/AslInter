@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="150sp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+
         android:gravity="center"
         android:text="Question?"
         android:textColor="@color/black"
@@ -75,7 +75,6 @@
         android:id="@+id/Pps_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -86,7 +85,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:layout_marginBottom="20dp"
             android:max="5"
             android:minHeight="50dp"
             android:progress="1"
@@ -100,7 +98,6 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="1/5"
-            android:layout_marginBottom="20dp"
             android:textColor="@color/black" />
 
     </LinearLayout>

@@ -17,10 +17,12 @@
         android:orientation="vertical">
 
     <ImageView
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_above="@id/ivSplashLogo"
       android:id="@+id/ivSplashTitle"
+      android:layout_marginBottom="100dp"
+      android:layout_gravity="center"
       android:adjustViewBounds="true"
       android:src="@drawable/logo_mjc"/>
 
@@ -31,7 +33,7 @@
         android:layout_gravity="center"
         android:fontFamily="@font/librebodonibolditalic9aqb"
         android:text="ASL Intermédiaire"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="100dp"
         android:textColor="@color/black"
         android:textSize="60dp" />
 

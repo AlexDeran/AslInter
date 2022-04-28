@@ -19,7 +19,7 @@ public class ConjugaisonActivity  extends AppCompatActivity {
     private Button mPps;
     private Button mPresent;
     private Button mImparfait;
-    private Button mPC;
+    // private Button mPC;
     Toolbar mToolbar;
 
     @Override
@@ -34,7 +34,7 @@ public class ConjugaisonActivity  extends AppCompatActivity {
         mPps = findViewById(R.id.pps_btn);
         mPresent = findViewById(R.id.present_btn);
         mImparfait = findViewById(R.id.imparfait_btn);
-        mPC = findViewById(R.id.pc_btn);
+       // mPC = findViewById(R.id.pc_btn);
 
         mPps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,12 +60,12 @@ public class ConjugaisonActivity  extends AppCompatActivity {
             }
         });
 
-        mPC.setOnClickListener(new View.OnClickListener() {
+       /* mPC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent PCActivityIntent = new Intent(ConjugaisonActivity.this, VocActivity.class);
                 startActivity(PCActivityIntent);
             }
-        });
+        }); */
     }
 }

@@ -23,7 +23,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.mjcasl.aslintermediaire.R;
 import com.mjcasl.aslintermediaire.model.ImgBank;
 import com.mjcasl.aslintermediaire.model.ImgQuestion;
-import com.mjcasl.aslintermediaire.model.Question;
 
 import java.util.Arrays;
 import java.util.Locale;

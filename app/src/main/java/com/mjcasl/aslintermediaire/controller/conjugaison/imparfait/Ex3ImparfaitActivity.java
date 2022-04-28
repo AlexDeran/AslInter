@@ -239,7 +239,7 @@ public class Ex3ImparfaitActivity extends AppCompatActivity implements View.OnCl
                 3);
 
         ImgQuestion imgQuestion5 = new ImgQuestion("Ce jour là, ______ mangiez une pizza.",R.drawable.pizza2,
-                Arrays.asList("Je", "Tu", "Ils", "Elle"),
+                Arrays.asList("Je", "Tu", "Vous", "Elle"),
                 2);
 
         ImgQuestion imgQuestion6 = new ImgQuestion("Cette nuit, ______ aboyait sous ma fenêtre.",R.drawable.chienaboie,

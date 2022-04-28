@@ -19,10 +19,8 @@ import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
 public class LeconMenuActivity extends AppCompatActivity {
     private Button mPPS;
     private Button mPresent;
-    private Button mImparfait;
-    private Button mPC;
-    private Button mTBD;
-    private Button mTBD2;
+   // private Button mImparfait;
+   // private Button mPC;
     Toolbar mToolbar;
 
     @Override
@@ -36,8 +34,8 @@ public class LeconMenuActivity extends AppCompatActivity {
 
         mPPS = findViewById(R.id.pps_btn);
         mPresent = findViewById(R.id.present_btn);
-        mImparfait = findViewById(R.id.imparfait_btn);
-        mPC = findViewById(R.id.pc_btn);
+       // mImparfait = findViewById(R.id.imparfait_btn);
+       // mPC = findViewById(R.id.pc_btn);
 
         mPPS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,20 +53,20 @@ public class LeconMenuActivity extends AppCompatActivity {
             }
         });
 
-        mImparfait.setOnClickListener(new View.OnClickListener() {
+       /* mImparfait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent ImparfaitActivityIntent = new Intent(LeconMenuActivity.this, LeconMenuActivity.class);
                 startActivity(ImparfaitActivityIntent);
             }
-        });
+        });*/
 
-        mPC.setOnClickListener(new View.OnClickListener() {
+       /* mPC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent PCActivityIntent = new Intent(LeconMenuActivity.this, VocActivity.class);
                 startActivity(PCActivityIntent);
             }
-        });
+        });*/
     }
 }

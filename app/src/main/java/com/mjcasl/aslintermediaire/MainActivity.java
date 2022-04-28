@@ -12,18 +12,18 @@ import com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button mConjugaison;
-    private Button mGram;
+   // private Button mGram;
     private Button mLecon;
-    private Button mVoc;
+   // private Button mVoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mConjugaison = findViewById(R.id.conjugaison_btn);
-        mGram = findViewById(R.id.gram_btn);
+        //mGram = findViewById(R.id.gram_btn);
         mLecon = findViewById(R.id.leçon_btn);
-        mVoc = findViewById(R.id.voc_btn);
+        //mVoc = findViewById(R.id.voc_btn);
 
 
         mConjugaison.setOnClickListener(new View.OnClickListener() {
@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mGram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent GramActivityIntent = new Intent(MainActivity.this, GramActivity.class);
+        /*mGram.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent GramActivityIntent = new Intent(MainActivity.this, GramActivity.class);
                 startActivity(GramActivityIntent);
-            }
-        });
+           }
+        });*/
 
         mLecon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mVoc.setOnClickListener(new View.OnClickListener() {
-            @Override
+       /* mVoc.setOnClickListener(new View.OnClickListener() {
+           @Override
             public void onClick(View v) {
                Intent VocActivityIntent = new Intent(MainActivity.this, VocActivity.class);
                 startActivity(VocActivityIntent);
             }
-        });
+        });*/
     }
 }
