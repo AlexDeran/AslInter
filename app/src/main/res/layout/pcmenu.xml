@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/turquoise"
+    tools:context="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity">
+
+    <include
+        android:id="@+id/asl_toolbar"
+        layout="@layout/actionbarmain">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Le Passé Composé"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/black"
+            android:textSize="150dp" />
+
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/expc1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/librebodonibolditalicxkxq"
+            android:padding="40dp"
+            android:text="Il/Elle et Ils/Elles"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/expc2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:padding="40dp"
+            android:text="Je et Tu"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/expc3_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:padding="40dp"
+            android:text="Nous et Vous"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+
+        <Button
+            android:id="@+id/quizfinalpc_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="40sp"
+            android:padding="40dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="QUIZ FINAL"
+            />
+
+</LinearLayout>
+

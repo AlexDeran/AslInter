@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
+package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -25,7 +25,7 @@ import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 
-public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex5pcActivity extends AppCompatActivity implements View.OnClickListener {
 
     //public static final long COUNTDOWN_IN_MILLIS = 11000;
 

@@ -432,7 +432,7 @@ public class QFPREActivity extends AppCompatActivity implements View.OnClickList
                 Arrays.asList("Je", "Nous", "Tu", "Ils"),
                 2);
 
-        ImgQuestion imgQuestion39 = new ImgQuestion("______ fleuri au printemps.",R.drawable.logo_mjc,
+        ImgQuestion imgQuestion39 = new ImgQuestion("______ fleurit au printemps.",R.drawable.logo_mjc,
                 Arrays.asList("Les capucines", "Le lilas", "Les violettes", "Les roses"),
                 1);
 

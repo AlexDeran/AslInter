@@ -314,6 +314,63 @@
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
         </activity>
 
+        <activity
+            android:name=".controller.conjugaison.pc.Ex1pcActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.PcmenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.Ex2pcActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.Ex3pcActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.Ex4pcActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.Ex5pcActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.pc.QFPCActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
     </application>
 
 </manifest>

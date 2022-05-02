@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
+package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -25,7 +25,7 @@ import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 
-public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex3pcActivity extends AppCompatActivity implements View.OnClickListener {
 
     //public static final long COUNTDOWN_IN_MILLIS = 11000;
 
@@ -58,19 +58,19 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expps5);
+        setContentView(R.layout.expps3);
 
 
         mImgBank = this.generateQuestions();
         mScore = 0;
-        mNumberOfQuestions = 10;
+        mNumberOfQuestions = 5;
 
         if (savedInstanceState != null) {
             mScore = savedInstanceState.getInt(BUNDLE_STATE_SCORE);
             mNumberOfQuestions = savedInstanceState.getInt(BUNDLE_STATE_QUESTION);
         } else {
             mScore = 0;
-            mNumberOfQuestions = 10;
+            mNumberOfQuestions = 5;
         }
 
         mEnableTouchEvents = true;
@@ -100,7 +100,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
         mImgQuestion = mImgBank.getImgQuestion();
         this.displayQuestion(mImgQuestion);
 
-        mQuestionTotal = 10;
+        mQuestionTotal = 5;
         mQuestionCounter = 1;
     }
 
@@ -127,7 +127,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
 
         if(responseIndex == mImgQuestion.getAnswerIndex()){
                 // Bon
-            Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_LONG);
+            Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
 
@@ -136,7 +136,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
             mScore++;
         } else {
             // Mauvais
-            Toast toast = Toast.makeText(this, "Mauvaise réponse !",Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "Mauvaise réponse !",Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
 
@@ -166,7 +166,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void run() {
                 mEnableTouchEvents = true;
-                if (--mNumberOfQuestions == 0 && mQuestionCounter <= 10) {
+                if (--mNumberOfQuestions == 0 && mQuestionCounter <= 5) {
                     // End the game
                     endGame();
                 } else {
@@ -176,7 +176,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
-                    mNbrofQuestion.setText(mQuestionCounter + "/10");
+                    mNbrofQuestion.setText(mQuestionCounter + "/5");
 
                     mProgressBar.setProgress(mQuestionCounter);
 
@@ -186,7 +186,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                     mPpsAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
-        }, 4000);
+        }, 2000);
     }
 
     @Override
@@ -197,7 +197,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
     private void endGame(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Bien joué !")
-        .setMessage("Votre score est de " + mScore + "/10")
+        .setMessage("Votre score est de " + mScore + "/5")
         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -222,66 +222,45 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private ImgBank generateQuestions() {
-        ImgQuestion imgQuestion1 = new ImgQuestion("Les renards mangent de la viande mais ______ aiment aussi les fruits.",
-                R.drawable.renard, Arrays.asList("Je", "Tu", "Ils", "Elles"),
-                2);
-
-        ImgQuestion imgQuestion2 = new ImgQuestion("Julie est contente car ______ a une nouvelle robe.",R.drawable.julie,
-                Arrays.asList("Tu", "Elle", "Nous", "Je"),
-                1);
-
-        ImgQuestion imgQuestion3 = new ImgQuestion("Les cigognes partent vers le sud et ______ reviendront au printemps.",
-                R.drawable.cigogne, Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        ImgQuestion imgQuestion1 = new ImgQuestion("Léa et sa maman", R.drawable.leamaman,
+                Arrays.asList("Je", "Tu", "Ils", "Elles"),
                 3);
 
-        ImgQuestion imgQuestion4 = new ImgQuestion("Moi, ______ trouve que cet exercice est facile.",R.drawable.moi,
+        ImgQuestion imgQuestion2 = new ImgQuestion("La joueuse de flûte",R.drawable.flute,
+                Arrays.asList("Il", "Elle", "Nous", "Je"),
+                1);
+
+        ImgQuestion imgQuestion3 = new ImgQuestion("L'enfant fatigué",R.drawable.enfantfatigue,
+                Arrays.asList("Il", "Elle", "Ils", "Je"),
+                0);
+
+        ImgQuestion imgQuestion4 = new ImgQuestion("Les gros nuages",R.drawable.nuage,
                 Arrays.asList("Ils", "Tu", "Je", "Nous"),
+                0);
+
+        ImgQuestion imgQuestion5 = new ImgQuestion("Rémi et Anna",R.drawable.remianna,
+                Arrays.asList("Je", "Tu", "Ils", "Elle"),
                 2);
 
-        ImgQuestion imgQuestion5 = new ImgQuestion("Demain, mes amis et moi, ______ irons au cinéma.",R.drawable.demain,
-                Arrays.asList("Il", "Nous", "Je", "Elle"),
-                1);
-
-        ImgQuestion imgQuestion6 = new ImgQuestion("Le soleil se lève à l'est et ______ se couche à l'ouest.",R.drawable.soleil,
+        ImgQuestion imgQuestion6 = new ImgQuestion("La tortue et sa salade",R.drawable.saladetortue,
                 Arrays.asList("Il", "Vous", "Je", "Elles"),
-                0);
-
-        ImgQuestion imgQuestion7 = new ImgQuestion("Ton copain et toi, ______ êtes vraiment inséparables.",R.drawable.copain,
-                Arrays.asList("Je", "Vous", "Tu", "Nous"),
-                1);
-
-        ImgQuestion imgQuestion8 = new ImgQuestion("Toi, ______ as l'air d'avoir fait une bêtise. ",R.drawable.toi,
-                Arrays.asList("Il", "Tu", "Ils", "Je"),
-                1);
-
-        ImgQuestion imgQuestion9 = new ImgQuestion("Mon ami et moi, ______ allons à la piscine.",R.drawable.piscine,
-                Arrays.asList("Elles", "Vous", "Je", "Nous"),
                 3);
 
-        ImgQuestion imgQuestion10 = new ImgQuestion("Sonia et ses copines se lèvent et ______ dansent.",R.drawable.sonia,
-                Arrays.asList("Ils", "Elles", "Il", "Elle"),
-                1);
-
-        ImgQuestion imgQuestion11 = new ImgQuestion("Les oiseaux se posent sur l'arbre et ______ chantent.",R.drawable.oiseaux5,
-                Arrays.asList("Ils", "Je", "Il", "Tu"),
-                0);
-
-        ImgQuestion imgQuestion12 = new ImgQuestion("La voiture freine et ______ s'arrête au feu rouge.",R.drawable.voiturefreine,
-                Arrays.asList("Ils", "Elles", "Il", "Elle"),
+        ImgQuestion imgQuestion7 = new ImgQuestion("Les bougies d'anniversaire",R.drawable.bougies,
+                Arrays.asList("Je", "Nous", "Tu", "Elles"),
                 3);
 
-        ImgQuestion imgQuestion13 = new ImgQuestion("Toi et ton chien, ______ devez aller en promenade.",R.drawable.chienprom,
-                Arrays.asList("Je", "Tu", "Vous", "Nous"),
+        ImgQuestion imgQuestion8 = new ImgQuestion("Thomas et son chien ",R.drawable.thomasiench,
+                Arrays.asList("Il", "Nous", "Ils", "Elles"),
                 2);
 
-        ImgQuestion imgQuestion14 = new ImgQuestion("Toi, ______ regardes trop la télévision.",R.drawable.toitv,
-                Arrays.asList("Il", "Tu", "Je", "Nous"),
-                1);
+        ImgQuestion imgQuestion9 = new ImgQuestion("L'affreuse sorcière",R.drawable.sorciere,
+                Arrays.asList("Elle", "Ils", "Je", "Elles"),
+                0);
 
-        ImgQuestion imgQuestion15 = new ImgQuestion("Le loup se gonfle, puis ______ souffle sur la maison.",R.drawable.loup,
-                Arrays.asList("Nous", "Ils", "Vous", "Il"),
-                3);
-
+        ImgQuestion imgQuestion10 = new ImgQuestion("Le poisson rouge",R.drawable.poissonrouge,
+                Arrays.asList("Ils", "Tu", "Il", "Nous"),
+                2);
 
 
         return new ImgBank(Arrays.asList(imgQuestion1,
@@ -293,12 +272,7 @@ public class Ex5ppsActivity extends AppCompatActivity implements View.OnClickLis
                 imgQuestion7,
                 imgQuestion8,
                 imgQuestion9,
-                imgQuestion10,
-                imgQuestion11,
-                imgQuestion12,
-                imgQuestion13,
-                imgQuestion14,
-                imgQuestion15
+                imgQuestion10
         ));
     }
 }

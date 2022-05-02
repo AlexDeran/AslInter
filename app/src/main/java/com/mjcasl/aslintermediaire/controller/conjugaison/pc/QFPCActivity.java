@@ -1,8 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pps;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,14 +16,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.ImgQuestion;
 import com.mjcasl.aslintermediaire.model.ImgBank;
+import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 import java.util.Locale;
 
-public class QFPPSActivity extends AppCompatActivity implements View.OnClickListener {
+public class QFPCActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 21000;
 

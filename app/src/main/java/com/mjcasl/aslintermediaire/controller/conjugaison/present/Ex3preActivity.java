@@ -241,7 +241,7 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Travaille", "Travailles", "Travaillent", "Travaillons"),
                 1);
 
-        ImgQuestion imgQuestion6 = new ImgQuestion("Les fleurs (pousser) au printemps",R.drawable.fleurs,
+        ImgQuestion imgQuestion6 = new ImgQuestion("Les fleurs (pousser) au printemps.",R.drawable.fleurs,
                 Arrays.asList("Poussent", "Pousse", "Poussons", "Poussez"),
                 0);
 
@@ -253,7 +253,7 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Joue", "Joues", "Jouons", "Jouez"),
                 3);
 
-        ImgQuestion imgQuestion9 = new ImgQuestion("Mes amis (arriver) à l'école",R.drawable.amis,
+        ImgQuestion imgQuestion9 = new ImgQuestion("Mes amis (arriver) à l'école.",R.drawable.amis,
                 Arrays.asList("Arrive", "Arrivent", "Arrivons", "Arrivez"),
                 1);
 
@@ -261,7 +261,7 @@ public class Ex3preActivity extends AppCompatActivity implements View.OnClickLis
                 Arrays.asList("Chantons", "Chante", "Chantes", "Chantez"),
                 2);
 
-        ImgQuestion imgQuestion11 = new ImgQuestion("Ma cousine (écouter) de la musique",R.drawable.cousine,
+        ImgQuestion imgQuestion11 = new ImgQuestion("Ma cousine (écouter) de la musique.",R.drawable.cousine,
                 Arrays.asList("Écoute", "Écoutes", "Écoutons", "Écoutent"),
                 0);
 
