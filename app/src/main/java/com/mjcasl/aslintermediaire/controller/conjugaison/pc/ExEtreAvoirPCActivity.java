@@ -1,4 +1,5 @@
 package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,7 +10,6 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,28 +20,27 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.ImgBank;
-import com.mjcasl.aslintermediaire.model.ImgQuestion;
+import com.mjcasl.aslintermediaire.model.Question;
+import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class Ex2pcActivity extends AppCompatActivity implements View.OnClickListener {
+public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //public static final long COUNTDOWN_IN_MILLIS = 11000;
+    public static final long COUNTDOWN_IN_MILLIS = 11000;
 
     private TextView mpcQuestion;
     private Button mpcAnswer1;
     private Button mpcAnswer2;
     private Button mpcAnswer3;
     private Button mpcAnswer4;
-    private ImageView mImage;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
     private ProgressBar mProgressBar;
 
-    private ImgBank mImgBank;
-    private ImgQuestion mImgQuestion;
+    private QuestionBank mQuestionBank;
+    private Question mQuestion;
 
     private int mScore;
     private int mNumberOfQuestions;
@@ -58,10 +57,10 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expc2);
+        setContentView(R.layout.expcetreavoir);
 
 
-        mImgBank = this.generateQuestions();
+        mQuestionBank = this.generateQuestions();
         mScore = 0;
         mNumberOfQuestions = 10;
 
@@ -80,7 +79,6 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
         mpcAnswer2 = findViewById(R.id.pc_answer2_btn);
         mpcAnswer3 = findViewById(R.id.pc_answer3_btn);
         mpcAnswer4 = findViewById(R.id.pc_answer4_btn);
-        mImage = findViewById(R.id.pc_image);
 
         mScoreDisplay = findViewById(R.id.pc_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
@@ -97,8 +95,8 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
         mpcAnswer3.setOnClickListener(this);
         mpcAnswer4.setOnClickListener(this);
 
-        mImgQuestion = mImgBank.getImgQuestion();
-        this.displayQuestion(mImgQuestion);
+        mQuestion = mQuestionBank.getQuestion();
+        this.displayQuestion(mQuestion);
 
         mQuestionTotal = 10;
         mQuestionCounter = 1;
@@ -125,7 +123,7 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
         int taganswer3 = (int) mpcAnswer3.getTag();
         int taganswer4 = (int) mpcAnswer4.getTag();
 
-        if(responseIndex == mImgQuestion.getAnswerIndex()){
+        if(responseIndex == mQuestion.getAnswerIndex()){
                 // Bon
             Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
@@ -142,20 +140,20 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
 
             v.setBackgroundColor(Color.parseColor("#830000"));
 
-            if(taganswer1 == mImgQuestion.getAnswerIndex()){
+            if(taganswer1 == mQuestion.getAnswerIndex()){
                 mpcAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
-            else if(taganswer2 == mImgQuestion.getAnswerIndex()){
+            else if(taganswer2 == mQuestion.getAnswerIndex()){
                 mpcAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
-            else if(taganswer3 == mImgQuestion.getAnswerIndex()){
+            else if(taganswer3 == mQuestion.getAnswerIndex()){
                 mpcAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
-            else if(taganswer4 == mImgQuestion.getAnswerIndex()){
+            else if(taganswer4 == mQuestion.getAnswerIndex()){
                 mpcAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
@@ -171,8 +169,8 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
                     endGame();
                 } else {
 
-                    mImgQuestion = mImgBank.getImgQuestion();
-                    displayQuestion(mImgQuestion);
+                    mQuestion = mQuestionBank.getQuestion();
+                    displayQuestion(mQuestion);
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
@@ -212,71 +210,45 @@ public class Ex2pcActivity extends AppCompatActivity implements View.OnClickList
         .show();
     }
 
-    private void displayQuestion(final ImgQuestion imgQuestion) {
-        mpcQuestion.setText(imgQuestion.getImgQuestion());
-        mImage.setImageResource(imgQuestion.getImage());
-        mpcAnswer1.setText(imgQuestion.getChoiceList().get(0));
-        mpcAnswer2.setText(imgQuestion.getChoiceList().get(1));
-        mpcAnswer3.setText(imgQuestion.getChoiceList().get(2));
-        mpcAnswer4.setText(imgQuestion.getChoiceList().get(3));
+    private void displayQuestion(final Question Question) {
+        mpcQuestion.setText(Question.getQuestion());
+        mpcAnswer1.setText(Question.getChoiceList().get(0));
+        mpcAnswer2.setText(Question.getChoiceList().get(1));
+        mpcAnswer3.setText(Question.getChoiceList().get(2));
+        mpcAnswer4.setText(Question.getChoiceList().get(3));
     }
 
-    private ImgBank generateQuestions() {
-        ImgQuestion imgQuestion1 = new ImgQuestion("Un jour j'(attraper) une grenouille", R.drawable.grenouille,
-                Arrays.asList("est attrapé", "ai attrapé", "est attraper", "ai attraper"),
+    private QuestionBank generateQuestions() {
+        Question Question1 = new Question("Vous",
+                Arrays.asList("Mes amis et moi", "Ton ami et toi", "Mon ami et moi", "Tes amis"),
                 1);
 
-        ImgQuestion imgQuestion2 = new ImgQuestion("Tu (manger) toute la tarte !",R.drawable.mangertarte,
-                Arrays.asList("a mangé", "est mangé", "as mangé", "est mangé"),
-                2);
-
-        ImgQuestion imgQuestion3 = new ImgQuestion("J'(envoyer) une lettre.",R.drawable.envoyerlettre,
-                Arrays.asList("est envoyé", "ai envoyé", "est envoyés", "ai envoyés"),
-                1);
-
-        ImgQuestion imgQuestion4 = new ImgQuestion("Tu (gagner) la course à pied. ",R.drawable.coursepied,
-                Arrays.asList("a gagné", "est gagné", "est gagnés", "as gagné"),
+        Question Question2 = new Question("Elles",
+                Arrays.asList("Les melons bien mûrs", "L'ananas", "La fraise rouge", "Les cerises rouges"),
                 3);
 
-        ImgQuestion imgQuestion5 = new ImgQuestion("J'(acheter) du bon pain frais.",R.drawable.painachete,
-                Arrays.asList("ai acheté", "est acheté", "ai achetés", "est achetés"),
-                0);
-
-        ImgQuestion imgQuestion6 = new ImgQuestion("Tu (couper) tes cheveux.",R.drawable.coupecheveux,
-                Arrays.asList("as coupé", "est coupé", "as coupés", "est coupés"),
-                0);
-
-        ImgQuestion imgQuestion7 = new ImgQuestion("Les voitures rouges",R.drawable.voiture,
-                Arrays.asList("Ils", "Elle", "Il", "Elles"),
-                3);
-
-        ImgQuestion imgQuestion8 = new ImgQuestion("Les arbres",R.drawable.arbre,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        Question Question3 = new Question("Il",
+                Arrays.asList("Mes jouets favoris", "Mes chemises blanches", "Mon livre preféré", "Ma veste usée"),
                 2);
 
-        ImgQuestion imgQuestion9 = new ImgQuestion("Les étoiles brillantes",R.drawable.etoiles,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
-                3);
-
-        ImgQuestion imgQuestion10 = new ImgQuestion("Les jolis jouets",R.drawable.jouets,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        Question Question4 = new Question("Elle",
+                Arrays.asList("Les échelles", "Le camion de pompier", "La grande échelle", "Les pompiers"),
                 2);
 
-        ImgQuestion imgQuestion11 = new ImgQuestion("L'épi de blé",R.drawable.epi,
-                Arrays.asList("Il", "Elle", "Ils", "Elles"),
+        Question Question5 = new Question("Ils",
+                Arrays.asList("Les moutons blancs", "Le chien du berger", "Les brebis", "La laine du mouton"),
                 0);
 
-        return new ImgBank(Arrays.asList(imgQuestion1,
-                imgQuestion2,
-                imgQuestion3,
-                imgQuestion4,
-                imgQuestion5,
-                imgQuestion6,
-                imgQuestion7,
-                imgQuestion8,
-                imgQuestion9,
-                imgQuestion10,
-                imgQuestion11
+        Question Question6 = new Question("Nous",
+                Arrays.asList("Ta mère et toi", "Son père et lui", "Sa mère et elle", "Mon père et moi"),
+                3);
+
+        return new QuestionBank(Arrays.asList(Question1,
+                Question2,
+                Question3,
+                Question4,
+                Question5,
+                Question6
         ));
     }
 }

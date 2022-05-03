@@ -315,7 +315,7 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.pc.Ex1pcActivity"
+            android:name=".controller.conjugaison.pc.ExIlEllesPCActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -332,7 +332,7 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.pc.Ex2pcActivity"
+            android:name=".controller.conjugaison.pc.ExJeTuPCActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -340,7 +340,7 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.pc.Ex3pcActivity"
+            android:name=".controller.conjugaison.pc.ExNousVousPCActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -348,15 +348,7 @@
         </activity>
 
         <activity
-            android:name=".controller.conjugaison.pc.Ex4pcActivity"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
-        </activity>
-
-        <activity
-            android:name=".controller.conjugaison.pc.Ex5pcActivity"
+            android:name=".controller.conjugaison.pc.ExEtreAvoirPCActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -31,12 +31,13 @@ public class PcmenuActivity extends AppCompatActivity {
         mExpc1 = findViewById(R.id.expc1_btn);
         mExpc2 = findViewById(R.id.expc2_btn);
         mExpc3 = findViewById(R.id.expc3_btn);
+        mExpc4 = findViewById(R.id.expc4_btn);
         mQuizFinal = findViewById(R.id.quizfinalpc_btn);
 
         mExpc1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity1Intent = new Intent(PcmenuActivity.this, Ex1pcActivity.class);
+                Intent pcActivity1Intent = new Intent(PcmenuActivity.this, ExIlEllesPCActivity.class);
                 startActivity(pcActivity1Intent);
             }
         });
@@ -44,7 +45,7 @@ public class PcmenuActivity extends AppCompatActivity {
         mExpc2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity2Intent = new Intent(PcmenuActivity.this, Ex2pcActivity.class);
+                Intent pcActivity2Intent = new Intent(PcmenuActivity.this, ExJeTuPCActivity.class);
                 startActivity(pcActivity2Intent);
             }
         });
@@ -52,7 +53,15 @@ public class PcmenuActivity extends AppCompatActivity {
         mExpc3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity3Intent = new Intent(PcmenuActivity.this, Ex3pcActivity.class);
+                Intent pcActivity3Intent = new Intent(PcmenuActivity.this, ExNousVousPCActivity.class);
+                startActivity(pcActivity3Intent);
+            }
+        });
+
+        mExpc4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pcActivity3Intent = new Intent(PcmenuActivity.this, ExEtreAvoirPCActivity.class);
                 startActivity(pcActivity3Intent);
             }
         });

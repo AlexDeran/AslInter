@@ -9,7 +9,7 @@
     android:background="@drawable/turquoise"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".controller.conjugaison.pc.Ex1pcActivity">
+    tools:context=".controller.conjugaison.pc.ExNousVousPCActivity">
 
     <include
         android:id="@+id/asl_toolbar"
@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/pps_Question"
+        android:id="@+id/pc_Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -59,22 +59,40 @@
         android:textStyle="bold"
         android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/pc_question_txt"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:text="Question?"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:layout_height="128dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/pc_image"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/arbre"
+        android:layout_gravity="center"
+        />
+
+        <TextView
+            android:id="@+id/pc_question_txt"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:text="Question?"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/pc_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -85,6 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:indeterminate="false"
+            android:layout_marginBottom="20dp"
             android:max="10"
             android:minHeight="50dp"
             android:progress="1"
@@ -98,6 +117,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="1/10"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -120,7 +140,7 @@
         android:backgroundTint="@color/black"
         android:text="Answer1"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
 
 
@@ -136,7 +156,7 @@
         android:text="Answer2"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -159,7 +179,7 @@
         android:backgroundTintMode="src_over"
         android:text="Answer3"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/pc_answer4_btn"
@@ -172,7 +192,7 @@
         android:backgroundTint="@color/black"
         android:text="Answer4"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 

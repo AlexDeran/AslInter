@@ -9,7 +9,7 @@
     android:background="@drawable/turquoise"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".controller.conjugaison.pc.Ex2pcActivity">
+    tools:context=".controller.conjugaison.pc.ExEtreAvoirPCActivity">
 
     <include
         android:id="@+id/asl_toolbar"
