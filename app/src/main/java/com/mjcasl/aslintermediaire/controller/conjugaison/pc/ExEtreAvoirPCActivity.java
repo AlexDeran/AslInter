@@ -1,5 +1,4 @@
 package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,6 +9,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,27 +20,28 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.Question;
-import com.mjcasl.aslintermediaire.model.QuestionBank;
+import com.mjcasl.aslintermediaire.model.ImgBank;
+import com.mjcasl.aslintermediaire.model.ImgQuestion;
 
 import java.util.Arrays;
 
 public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static final long COUNTDOWN_IN_MILLIS = 11000;
+    //public static final long COUNTDOWN_IN_MILLIS = 11000;
 
     private TextView mpcQuestion;
     private Button mpcAnswer1;
     private Button mpcAnswer2;
     private Button mpcAnswer3;
     private Button mpcAnswer4;
+    private ImageView mImage;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
     private ProgressBar mProgressBar;
 
-    private QuestionBank mQuestionBank;
-    private Question mQuestion;
+    private ImgBank mImgBank;
+    private ImgQuestion mImgQuestion;
 
     private int mScore;
     private int mNumberOfQuestions;
@@ -60,7 +61,7 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.expcetreavoir);
 
 
-        mQuestionBank = this.generateQuestions();
+        mImgBank = this.generateQuestions();
         mScore = 0;
         mNumberOfQuestions = 10;
 
@@ -79,6 +80,7 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
         mpcAnswer2 = findViewById(R.id.pc_answer2_btn);
         mpcAnswer3 = findViewById(R.id.pc_answer3_btn);
         mpcAnswer4 = findViewById(R.id.pc_answer4_btn);
+        mImage = findViewById(R.id.pc_image);
 
         mScoreDisplay = findViewById(R.id.pc_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
@@ -95,8 +97,8 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
         mpcAnswer3.setOnClickListener(this);
         mpcAnswer4.setOnClickListener(this);
 
-        mQuestion = mQuestionBank.getQuestion();
-        this.displayQuestion(mQuestion);
+        mImgQuestion = mImgBank.getImgQuestion();
+        this.displayQuestion(mImgQuestion);
 
         mQuestionTotal = 10;
         mQuestionCounter = 1;
@@ -123,8 +125,8 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
         int taganswer3 = (int) mpcAnswer3.getTag();
         int taganswer4 = (int) mpcAnswer4.getTag();
 
-        if(responseIndex == mQuestion.getAnswerIndex()){
-                // Bon
+        if(responseIndex == mImgQuestion.getAnswerIndex()){
+            // Bon
             Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
@@ -140,20 +142,20 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
 
             v.setBackgroundColor(Color.parseColor("#830000"));
 
-            if(taganswer1 == mQuestion.getAnswerIndex()){
+            if(taganswer1 == mImgQuestion.getAnswerIndex()){
                 mpcAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
-            else if(taganswer2 == mQuestion.getAnswerIndex()){
+            else if(taganswer2 == mImgQuestion.getAnswerIndex()){
                 mpcAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
-            else if(taganswer3 == mQuestion.getAnswerIndex()){
+            else if(taganswer3 == mImgQuestion.getAnswerIndex()){
                 mpcAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
-            else if(taganswer4 == mQuestion.getAnswerIndex()){
+            else if(taganswer4 == mImgQuestion.getAnswerIndex()){
                 mpcAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
@@ -169,8 +171,8 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
                     endGame();
                 } else {
 
-                    mQuestion = mQuestionBank.getQuestion();
-                    displayQuestion(mQuestion);
+                    mImgQuestion = mImgBank.getImgQuestion();
+                    displayQuestion(mImgQuestion);
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
@@ -195,60 +197,82 @@ public class ExEtreAvoirPCActivity extends AppCompatActivity implements View.OnC
     private void endGame(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Bien joué !")
-        .setMessage("Votre score est de " + mScore + "/10")
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // End the activity
-                Intent intent = new Intent();
-                intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
-                setResult(RESULT_OK, intent);
-                finish();
-            }
-        })
-        .create()
-        .show();
+                .setMessage("Votre score est de " + mScore + "/10")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // End the activity
+                        Intent intent = new Intent();
+                        intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                    }
+                })
+                .create()
+                .show();
     }
 
-    private void displayQuestion(final Question Question) {
-        mpcQuestion.setText(Question.getQuestion());
-        mpcAnswer1.setText(Question.getChoiceList().get(0));
-        mpcAnswer2.setText(Question.getChoiceList().get(1));
-        mpcAnswer3.setText(Question.getChoiceList().get(2));
-        mpcAnswer4.setText(Question.getChoiceList().get(3));
+    private void displayQuestion(final ImgQuestion imgQuestion) {
+        mpcQuestion.setText(imgQuestion.getImgQuestion());
+        mImage.setImageResource(imgQuestion.getImage());
+        mpcAnswer1.setText(imgQuestion.getChoiceList().get(0));
+        mpcAnswer2.setText(imgQuestion.getChoiceList().get(1));
+        mpcAnswer3.setText(imgQuestion.getChoiceList().get(2));
+        mpcAnswer4.setText(imgQuestion.getChoiceList().get(3));
     }
 
-    private QuestionBank generateQuestions() {
-        Question Question1 = new Question("Vous",
-                Arrays.asList("Mes amis et moi", "Ton ami et toi", "Mon ami et moi", "Tes amis"),
-                1);
-
-        Question Question2 = new Question("Elles",
-                Arrays.asList("Les melons bien mûrs", "L'ananas", "La fraise rouge", "Les cerises rouges"),
-                3);
-
-        Question Question3 = new Question("Il",
-                Arrays.asList("Mes jouets favoris", "Mes chemises blanches", "Mon livre preféré", "Ma veste usée"),
+    private ImgBank generateQuestions() {
+        ImgQuestion imgQuestion1 = new ImgQuestion("Tu (être) une vraie championne.", R.drawable.championnepc,
+                Arrays.asList("a été", "est été", "as été", "es été"),
                 2);
 
-        Question Question4 = new Question("Elle",
-                Arrays.asList("Les échelles", "Le camion de pompier", "La grande échelle", "Les pompiers"),
-                2);
-
-        Question Question5 = new Question("Ils",
-                Arrays.asList("Les moutons blancs", "Le chien du berger", "Les brebis", "La laine du mouton"),
+        ImgQuestion imgQuestion2 = new ImgQuestion("Mon chien (avoir) une visite médicale.",R.drawable.visitemedicale,
+                Arrays.asList("a eu", "as eu", "est eu", " es eu"),
                 0);
 
-        Question Question6 = new Question("Nous",
-                Arrays.asList("Ta mère et toi", "Son père et lui", "Sa mère et elle", "Mon père et moi"),
+        ImgQuestion imgQuestion3 = new ImgQuestion("Mes parents (être) de grands lecteurs.",R.drawable.bibliolecteurs,
+                Arrays.asList("a été", "sont été", "ont été", "as été"),
+                2);
+
+        ImgQuestion imgQuestion4 = new ImgQuestion("Nous (être) de vrais fermiers !",R.drawable.ferme,
+                Arrays.asList("avons été", "sommes été", "avez été", "êtes été"),
+                0);
+
+        ImgQuestion imgQuestion5 = new ImgQuestion("J'(avoir) une souris blanche.",R.drawable.sourisblanche,
+                Arrays.asList("es eu", "ai eu", "est eu", "ais eu"),
+                1);
+
+        ImgQuestion imgQuestion6 = new ImgQuestion("Vous (avoir) des crayons de couleurs.",R.drawable.crayonscouleurs,
+                Arrays.asList("avez eu", "avons eu", "sommes eu", "êtes eu"),
+                0);
+
+        ImgQuestion imgQuestion7 = new ImgQuestion("Nous (avoir) une grande maison.",R.drawable.maisonverte,
+                Arrays.asList("sommes eu", "avons eu", "êtes eu", "avez eu"),
+                1);
+
+        ImgQuestion imgQuestion8 = new ImgQuestion("Mon oncle (être) un chanteur connu.",R.drawable.chanteur,
+                Arrays.asList("est été", "a été", "as été", "es été"),
+                1);
+
+        ImgQuestion imgQuestion9 = new ImgQuestion("Vous (avoir) peur de la sorciére.",R.drawable.sorciere,
+                Arrays.asList("avons eu", "avez eu", "sommes eu", "êtes eu"),
+                1);
+
+        ImgQuestion imgQuestion10 = new ImgQuestion("Tu (être) le gardien de but.",R.drawable.gardienbut,
+                Arrays.asList("a été", "est été", "es été", "as été"),
                 3);
 
-        return new QuestionBank(Arrays.asList(Question1,
-                Question2,
-                Question3,
-                Question4,
-                Question5,
-                Question6
+
+        return new ImgBank(Arrays.asList(imgQuestion1,
+                imgQuestion2,
+                imgQuestion3,
+                imgQuestion4,
+                imgQuestion5,
+                imgQuestion6,
+                imgQuestion7,
+                imgQuestion8,
+                imgQuestion9,
+                imgQuestion10
         ));
     }
 }

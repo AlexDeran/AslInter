@@ -10,11 +10,10 @@ import androidx.appcompat.widget.Toolbar;
 import com.mjcasl.aslintermediaire.R;
 
 public class PcmenuActivity extends AppCompatActivity {
-    private Button mExpc1;
-    private Button mExpc2;
-    private Button mExpc3;
-    private Button mExpc4;
-    private Button mExpc5;
+    private Button mExpcIlElles;
+    private Button mExpcJeTu;
+    private Button mExpcNousVous;
+    private Button mExpcEtreAvoir;
     private Button mQuizFinal;
 
     Toolbar mToolbar;
@@ -28,41 +27,41 @@ public class PcmenuActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        mExpc1 = findViewById(R.id.expc1_btn);
-        mExpc2 = findViewById(R.id.expc2_btn);
-        mExpc3 = findViewById(R.id.expc3_btn);
-        mExpc4 = findViewById(R.id.expc4_btn);
-        mQuizFinal = findViewById(R.id.quizfinalpc_btn);
+        mExpcIlElles = findViewById(R.id.exfutur1_btn);
+        mExpcJeTu = findViewById(R.id.exfutur2_btn);
+        mExpcNousVous = findViewById(R.id.exfutur3_btn);
+        mExpcEtreAvoir = findViewById(R.id.exfutur4_btn);
+        mQuizFinal = findViewById(R.id.quizfinalfutur_btn);
 
-        mExpc1.setOnClickListener(new View.OnClickListener() {
+        mExpcIlElles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity1Intent = new Intent(PcmenuActivity.this, ExIlEllesPCActivity.class);
-                startActivity(pcActivity1Intent);
+                Intent pcActivityIlEllesIntent = new Intent(PcmenuActivity.this, ExIlEllesPCActivity.class);
+                startActivity(pcActivityIlEllesIntent);
             }
         });
 
-        mExpc2.setOnClickListener(new View.OnClickListener() {
+        mExpcJeTu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity2Intent = new Intent(PcmenuActivity.this, ExJeTuPCActivity.class);
-                startActivity(pcActivity2Intent);
+                Intent pcActivityJeTuIntent = new Intent(PcmenuActivity.this, ExJeTuPCActivity.class);
+                startActivity(pcActivityJeTuIntent);
             }
         });
 
-        mExpc3.setOnClickListener(new View.OnClickListener() {
+        mExpcNousVous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity3Intent = new Intent(PcmenuActivity.this, ExNousVousPCActivity.class);
-                startActivity(pcActivity3Intent);
+                Intent pcActivityNousVousIntent = new Intent(PcmenuActivity.this, ExNousVousPCActivity.class);
+                startActivity(pcActivityNousVousIntent);
             }
         });
 
-        mExpc4.setOnClickListener(new View.OnClickListener() {
+        mExpcEtreAvoir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pcActivity3Intent = new Intent(PcmenuActivity.this, ExEtreAvoirPCActivity.class);
-                startActivity(pcActivity3Intent);
+                Intent pcActivityEtreAvoirIntent = new Intent(PcmenuActivity.this, ExEtreAvoirPCActivity.class);
+                startActivity(pcActivityEtreAvoirIntent);
             }
         });
 

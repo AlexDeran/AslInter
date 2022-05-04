@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
+package com.mjcasl.aslintermediaire.controller.conjugaison.futur;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
@@ -219,44 +219,44 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
     }
 
     private QuestionBank generateQuestions() {
-        Question Question1 = new Question("Mon frère (aller) chez le dentiste ce matin.",
-                Arrays.asList("est allais", "a aller", "est allé", "a allé"),
+        Question Question1 = new Question("J'(avoir) une bonne note à mon contrôle.",
+                Arrays.asList("avais", "ai", "aurai", "avez"),
                 2);
 
-        Question Question2 = new Question(" Les voisins m' (dire) que le radiateur a chauffé toute la nuit.",
-                Arrays.asList("a dit", "est dit", "ont dit", "sont dit"),
+        Question Question2 = new Question("Tu (être) derrière moi lorsque je le rencontrerai.",
+                Arrays.asList("est", "était", "seras", "êtez"),
                 2);
 
-        Question Question3 = new Question(" Ils (visiter) des sites extraordinaires pendant ce séjour en Grèce.",
-                Arrays.asList("est visité", "ont visité", "ont visités", "est visités"),
+        Question Question3 = new Question("Il (aimer) le film et te le conseillera, j'en suis certain.",
+                Arrays.asList("aimait", "aimé", "aime", "aimera"),
+                3);
+
+        Question Question4 = new Question("Nous (placer) la chaise à droite de la table.",
+                Arrays.asList("placera", "placerai", "placerons", "placerez"),
+                2);
+
+        Question Question5 = new Question("Vous (manger) des tomates lorsque ce sera la saison.",
+                Arrays.asList("mangeait ", "mangez", "mangerez", "mangerai"),
+                2);
+
+        Question Question6 = new Question("Ils (peser) Nathan chez le pédiatre.",
+                Arrays.asList("pesais", "pèseront", "pèsera", "pesèrent"),
                 1);
 
-        Question Question4 = new Question("Quand Marie (naître), mes parents n'avaient que vingt ans.",
-                Arrays.asList("est née", "est nait", "a née", "a nait"),
+        Question Question7 = new Question("Vous (céder) devant la menace.",
+                Arrays.asList("céderez", "cédez", "céderons", "cédons"),
                 0);
 
-        Question Question5 = new Question("Connaissait-t-il les chansons qu'il (entendre) ?",
-                Arrays.asList("as entendu", "a entendu", "est entendus", "est entendu"),
-                1);
-
-        Question Question6 = new Question("Delphine et Marinette (se regarder) en riant.",
-                Arrays.asList("se sont regardées", "se ont regardé", "se a regardé", "se sont regardé"),
+        Question Question8 = new Question("Nous (jeter) l'éponge pour cette fois-ci.",
+                Arrays.asList("jetterons", "jettons", "jetez ", "jetterez"),
                 0);
 
-        Question Question7 = new Question("Les femmes qu'il (rencontrer) venaient toutes du Chili.",
-                Arrays.asList("est rencontré", "a rencontré", "a rencontrer", "est rencontrer"),
-                1);
-
-        Question Question8 = new Question("Les deux petites filles (mourir) de rire.",
-                Arrays.asList("sont mortes", "ont morts", "sont mort", "ont mortes"),
+        Question Question9 = new Question("Il (modeler) la statuette avant de la mettre au four.",
+                Arrays.asList("modèlera", "modèleront", "modelons", "modelez"),
                 0);
 
-        Question Question9 = new Question("Il faudra faire examiner les champignons qu'il (cueillir).",
-                Arrays.asList("a cueilli", "a cueillit", "est cueillit", "est cueilli"),
-                0);
-
-        Question Question10 = new Question("Les troupeaux de brebis (descendre) de la montagne.",
-                Arrays.asList("ont descendus", "sont descendus", "est descendu", "a descendu"),
+        Question Question10 = new Question("Tu (créer) un lien amical avec eux, crois-moi.",
+                Arrays.asList("créas", "créeras", "créé", "créras"),
                 1);
 
         return new QuestionBank(Arrays.asList(Question1,

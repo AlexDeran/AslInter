@@ -201,6 +201,55 @@
         </activity>
 
         <activity
+            android:name=".controller.conjugaison.futur.Ex1FuturActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.futur.FuturmenuActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.futur.Ex2FuturActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.futur.Ex3FuturActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.futur.ExFuturEtreAvoirActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.conjugaison.futur.QFFuturActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+        </activity>
+
+        <activity
             android:name=".controller.conjugaison.pps.Ex1ppsActivity"
             android:screenOrientation="portrait">
             <meta-data

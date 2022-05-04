@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
+package com.mjcasl.aslintermediaire.controller.conjugaison.futur;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,7 +27,7 @@ import com.mjcasl.aslintermediaire.model.ImgQuestion;
 import java.util.Arrays;
 import java.util.Locale;
 
-public class QFPCActivity extends AppCompatActivity implements View.OnClickListener {
+public class QFFuturActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 21000;
 

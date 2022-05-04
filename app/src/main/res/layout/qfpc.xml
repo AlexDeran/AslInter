@@ -9,7 +9,7 @@
     android:background="@drawable/turquoise"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".controller.conjugaison.pc.ExIlEllesPCActivity">
+    tools:context=".controller.conjugaison.pps.QFPPSActivity">
 
     <include
         android:id="@+id/asl_toolbar"
@@ -24,7 +24,7 @@
         android:text="Le passé composé"
         android:background="@drawable/rectangle"
         android:textColor="@color/black"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
@@ -37,54 +37,92 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/pc_score"
-            android:layout_width="match_parent"
+            android:id="@+id/pps_score"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="Score : 0"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Pps_QuizFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="200dp"
+            android:text="QUIZ FINAL"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pps_question_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="00:20"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
     </LinearLayout>
 
     <TextView
-        android:id="@+id/pps_Question"
+        android:id="@+id/Pps_Question"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:text="Conjuge la phrase au passé composé."
+        android:text="Conjuge la phras au passé composé."
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/pc_question_txt"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Question?"
-        android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <LinearLayout
-        android:id="@+id/pc_progress"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/pps_image"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_mjc" />
+
+        <TextView
+            android:id="@+id/Pps_question_txt"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:text="Question?"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Pps_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ProgressBar
-            android:id="@+id/pc_progress_bar"
+            android:id="@+id/Pps_progress_bar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="10"
+            android:layout_marginBottom="20dp"
+            android:max="20"
             android:minHeight="50dp"
             android:progress="1"
             android:progressBackgroundTint="@color/black"/>
@@ -96,7 +134,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
-            android:text="1/10"
+            android:text="1/20"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -104,13 +143,13 @@
     <LinearLayout
         android:id="@+id/btngp1"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
     <Button
-        android:id="@+id/pc_answer1_btn"
+        android:id="@+id/pps_answer1_btn"
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
@@ -119,12 +158,12 @@
         android:backgroundTint="@color/black"
         android:text="Answer1"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
 
 
     <Button
-        android:id="@+id/pc_answer2_btn"
+        android:id="@+id/pps_answer2_btn"
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
@@ -135,20 +174,20 @@
         android:text="Answer2"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/btngp2"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="5dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
     <Button
-        android:id="@+id/pc_answer3_btn"
+        android:id="@+id/pps_answer3_btn"
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
@@ -158,10 +197,10 @@
         android:backgroundTintMode="src_over"
         android:text="Answer3"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/pc_answer4_btn"
+        android:id="@+id/pps_answer4_btn"
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
@@ -171,7 +210,7 @@
         android:backgroundTint="@color/black"
         android:text="Answer4"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     </LinearLayout>
 

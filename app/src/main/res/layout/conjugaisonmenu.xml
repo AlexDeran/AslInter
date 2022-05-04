@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp">
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp">
 
         <TextView
             android:id="@+id/Title"
@@ -37,25 +37,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
 
         <Button
             android:id="@+id/pps_btn"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalicxkxq"
             android:padding="20dp"
             android:text="Les pronoms personnels sujets"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/present_btn"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
             android:backgroundTint="@color/black"
@@ -66,56 +66,65 @@
             android:textSize="26sp"
             android:layout_marginLeft="100dp" />
 
-        <Button
-            android:id="@+id/imparfait_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="19sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="L'imparfait"
-            android:layout_marginLeft="100dp" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginBottom="30dp">
 
         <Button
+            android:id="@+id/imparfait_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="L'imparfait" />
+
+        <Button
             android:id="@+id/pc_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:textSize="25sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Le passé composé"/>
-
-        <Button
-            android:id="@+id/test2_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:padding="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="Le Futur"
+            android:text="Le passé composé"
             android:layout_marginLeft="60dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/futur_btn"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:padding="20dp"
+            android:fontFamily="@font/librebodonibolditalic9aqb"
+            android:text="Le Futur" />
 
         <Button
             android:id="@+id/chgttps_btn"
             android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_marginStart="60dp"
             android:textSize="17sp"
@@ -124,52 +133,6 @@
             android:text="Changement de temps ?? (Peut être)"
             android:layout_marginLeft="60dp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
-
-        <Button
-            android:id="@+id/tbd4_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:textSize="25sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            />
-
-        <Button
-            android:id="@+id/test5_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="25sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
-
-        <Button
-            android:id="@+id/tbd6_btn"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="60dp"
-            android:textSize="25sp"
-            android:padding="20dp"
-            android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:text="TBD"
-            android:layout_marginLeft="100dp" />
     </LinearLayout>
 
 </LinearLayout>

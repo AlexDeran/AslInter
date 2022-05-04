@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.mjcasl.aslintermediaire.R;
+import com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity;
@@ -21,6 +22,7 @@ public class ConjugaisonActivity  extends AppCompatActivity {
     private Button mPresent;
     private Button mImparfait;
     private Button mPC;
+    private Button mFutur;
     Toolbar mToolbar;
 
     @Override
@@ -36,6 +38,7 @@ public class ConjugaisonActivity  extends AppCompatActivity {
         mPresent = findViewById(R.id.present_btn);
         mImparfait = findViewById(R.id.imparfait_btn);
         mPC = findViewById(R.id.pc_btn);
+        mFutur = findViewById(R.id.futur_btn);
 
         mPps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +69,14 @@ public class ConjugaisonActivity  extends AppCompatActivity {
             public void onClick(View v) {
                 Intent PCActivityIntent = new Intent(ConjugaisonActivity.this, PcmenuActivity.class);
                 startActivity(PCActivityIntent);
+            }
+        });
+
+        mFutur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent FuturActivityIntent = new Intent(ConjugaisonActivity.this, FuturmenuActivity.class);
+                startActivity(FuturActivityIntent);
             }
         });
     }
