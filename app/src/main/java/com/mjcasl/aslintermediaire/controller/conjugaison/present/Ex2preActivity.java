@@ -58,7 +58,7 @@ public class Ex2preActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expresent2);
+        setContentView(R.layout.expresentimg);
 
 
         mImgBank = this.generateQuestions();

@@ -1,4 +1,4 @@
-package com.mjcasl.aslintermediaire.controller.conjugaison.pc;
+package com.mjcasl.aslintermediaire.controller.conjugaison.futur;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,15 +25,15 @@ import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
-public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnClickListener {
+public class Ex4FuturActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
-    private TextView mpcQuestion;
-    private Button mpcAnswer1;
-    private Button mpcAnswer2;
-    private Button mpcAnswer3;
-    private Button mpcAnswer4;
+    private TextView mfuturQuestion;
+    private Button mfuturAnswer1;
+    private Button mfuturAnswer2;
+    private Button mfuturAnswer3;
+    private Button mfuturAnswer4;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
@@ -57,7 +57,7 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expctxt);
+        setContentView(R.layout.exfuturtxt);
 
 
         mQuestionBank = this.generateQuestions();
@@ -74,26 +74,26 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
 
         mEnableTouchEvents = true;
 
-        mpcQuestion = findViewById(R.id.pc_question_txt);
-        mpcAnswer1 = findViewById(R.id.pc_answer1_btn);
-        mpcAnswer2 = findViewById(R.id.pc_answer2_btn);
-        mpcAnswer3 = findViewById(R.id.pc_answer3_btn);
-        mpcAnswer4 = findViewById(R.id.pc_answer4_btn);
+        mfuturQuestion = findViewById(R.id.futur_question_txt);
+        mfuturAnswer1 = findViewById(R.id.futur_answer1_btn);
+        mfuturAnswer2 = findViewById(R.id.futur_answer2_btn);
+        mfuturAnswer3 = findViewById(R.id.futur_answer3_btn);
+        mfuturAnswer4 = findViewById(R.id.futur_answer4_btn);
 
-        mScoreDisplay = findViewById(R.id.pc_score);
+        mScoreDisplay = findViewById(R.id.futur_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mProgressBar = findViewById(R.id.pc_progress_bar);
+        mProgressBar = findViewById(R.id.futur_progress_bar);
 
         // Use the tag property to 'name' the buttons
-        mpcAnswer1.setTag(0);
-        mpcAnswer2.setTag(1);
-        mpcAnswer3.setTag(2);
-        mpcAnswer4.setTag(3);
+        mfuturAnswer1.setTag(0);
+        mfuturAnswer2.setTag(1);
+        mfuturAnswer3.setTag(2);
+        mfuturAnswer4.setTag(3);
 
-        mpcAnswer1.setOnClickListener(this);
-        mpcAnswer2.setOnClickListener(this);
-        mpcAnswer3.setOnClickListener(this);
-        mpcAnswer4.setOnClickListener(this);
+        mfuturAnswer1.setOnClickListener(this);
+        mfuturAnswer2.setOnClickListener(this);
+        mfuturAnswer3.setOnClickListener(this);
+        mfuturAnswer4.setOnClickListener(this);
 
         mQuestion = mQuestionBank.getQuestion();
         this.displayQuestion(mQuestion);
@@ -118,13 +118,13 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         int responseIndex = (int) v.getTag();
-        int taganswer1 = (int) mpcAnswer1.getTag();
-        int taganswer2 = (int) mpcAnswer2.getTag();
-        int taganswer3 = (int) mpcAnswer3.getTag();
-        int taganswer4 = (int) mpcAnswer4.getTag();
+        int taganswer1 = (int) mfuturAnswer1.getTag();
+        int taganswer2 = (int) mfuturAnswer2.getTag();
+        int taganswer3 = (int) mfuturAnswer3.getTag();
+        int taganswer4 = (int) mfuturAnswer4.getTag();
 
         if(responseIndex == mQuestion.getAnswerIndex()){
-                // Bon
+            // Bon
             Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
@@ -141,20 +141,20 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
             v.setBackgroundColor(Color.parseColor("#830000"));
 
             if(taganswer1 == mQuestion.getAnswerIndex()){
-                mpcAnswer1.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
             else if(taganswer2 == mQuestion.getAnswerIndex()){
-                mpcAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
+                mfuturAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
             else if(taganswer3 == mQuestion.getAnswerIndex()){
-                mpcAnswer3.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
             else if(taganswer4 == mQuestion.getAnswerIndex()){
-                mpcAnswer4.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
 
@@ -178,10 +178,10 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
 
                     mProgressBar.setProgress(mQuestionCounter);
 
-                    mpcAnswer1.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer2.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer3.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer4.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer1.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer2.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer3.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
         }, 2000);
@@ -195,68 +195,68 @@ public class ExIlEllesPCActivity extends AppCompatActivity implements View.OnCli
     private void endGame(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Bien joué !")
-        .setMessage("Votre score est de " + mScore + "/10")
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // End the activity
-                Intent intent = new Intent();
-                intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
-                setResult(RESULT_OK, intent);
-                finish();
-            }
-        })
-        .create()
-        .show();
+                .setMessage("Votre score est de " + mScore + "/10")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // End the activity
+                        Intent intent = new Intent();
+                        intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                    }
+                })
+                .create()
+                .show();
     }
 
     private void displayQuestion(final Question Question) {
-        mpcQuestion.setText(Question.getQuestion());
-        mpcAnswer1.setText(Question.getChoiceList().get(0));
-        mpcAnswer2.setText(Question.getChoiceList().get(1));
-        mpcAnswer3.setText(Question.getChoiceList().get(2));
-        mpcAnswer4.setText(Question.getChoiceList().get(3));
+        mfuturQuestion.setText(Question.getQuestion());
+        mfuturAnswer1.setText(Question.getChoiceList().get(0));
+        mfuturAnswer2.setText(Question.getChoiceList().get(1));
+        mfuturAnswer3.setText(Question.getChoiceList().get(2));
+        mfuturAnswer4.setText(Question.getChoiceList().get(3));
     }
 
     private QuestionBank generateQuestions() {
-        Question Question1 = new Question("Mon frère (aller) chez le dentiste ce matin.",
-                Arrays.asList("est allais", "a aller", "est allé", "a allé"),
+        Question Question1 = new Question("Je (dormir) chez ma tante le soir du mariage.",
+                Arrays.asList("dormiras", "dormirai", "dormirons", "dormira"),
+                1);
+
+        Question Question2 = new Question(" Tu (courir) de plus en plus vite si tu t'entraînes.",
+                Arrays.asList("courras", "courrai", "courrons", "courrez"),
+                0);
+
+        Question Question3 = new Question("Il (mourir) d'inquiétude si tu ne lui téléphones pas.",
+                Arrays.asList("mourra", "mourrai", "mourras", "mourons"),
+                0);
+
+        Question Question4 = new Question("Nous (savoir) de quoi il retourne dans un instant.",
+                Arrays.asList("sauras", "sauront", "saurons", "saurez"),
                 2);
 
-        Question Question2 = new Question(" Les voisins m' (dire) que le radiateur a chauffé toute la nuit.",
-                Arrays.asList("a dit", "est dit", "ont dit", "sont dit"),
-                2);
+        Question Question5 = new Question("Vous (devoir) recommencer le traitement dès ce soir.",
+                Arrays.asList("devrez ", "devrons", "devra", "devrai"),
+                0);
 
-        Question Question3 = new Question(" Ils (visiter) des sites extraordinaires pendant ce séjour en Grèce.",
-                Arrays.asList("est visité", "ont visité", "ont visités", "est visités"),
+        Question Question6 = new Question("Ils (pouvoir) revenir mercredi s'ils le désirent.",
+                Arrays.asList("pourra", "pourront", "pourrez", "pourrai"),
                 1);
 
-        Question Question4 = new Question("Quand Marie (naître), mes parents n'avaient que vingt ans.",
-                Arrays.asList("est née", "est nait", "a née", "a nait"),
-                0);
-
-        Question Question5 = new Question("Connaissait-t-il les chansons qu'il (entendre) ?",
-                Arrays.asList("as entendu", "a entendu", "est entendus", "est entendu"),
+        Question Question7 = new Question("Vous (rendre) compte de vos actions à vos moniteurs.",
+                Arrays.asList("rendront", "rendrez", "rendra", "rendrons"),
                 1);
 
-        Question Question6 = new Question("Delphine et Marinette (se regarder) en riant.",
-                Arrays.asList("se sont regardées", "se ont regardé", "se a regardé", "se sont regardé"),
+        Question Question8 = new Question("Nous (prendre) la main des enfants pour traverser la rue.",
+                Arrays.asList("prendrons", "prendrez", "prendrai ", "prendra"),
                 0);
 
-        Question Question7 = new Question("Les femmes qu'il (rencontrer) venaient toutes du Chili.",
-                Arrays.asList("est rencontré", "a rencontré", "a rencontrer", "est rencontrer"),
+        Question Question9 = new Question("Il (faire) de son mieux mais je ne crois pas qu'il y parvienne.",
+                Arrays.asList("ferons", "fera", "ferai", "feront"),
                 1);
 
-        Question Question8 = new Question("Les deux petites filles (mourir) de rire.",
-                Arrays.asList("sont mortes", "ont morts", "sont mort", "ont mortes"),
-                0);
-
-        Question Question9 = new Question("Il faudra faire examiner les champignons qu'il (cueillir).",
-                Arrays.asList("a cueilli", "a cueillit", "est cueillit", "est cueilli"),
-                0);
-
-        Question Question10 = new Question("Les troupeaux de brebis (descendre) de la montagne.",
-                Arrays.asList("ont descendus", "sont descendus", "est descendu", "a descendu"),
+        Question Question10 = new Question("Tu (mettre) la table à 7 H, le repas sera prêt.",
+                Arrays.asList("mettra", "mettras", "mettrons", "mettrai"),
                 1);
 
         return new QuestionBank(Arrays.asList(Question1,

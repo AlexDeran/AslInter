@@ -58,7 +58,7 @@ public class ExFuturEtreAvoirActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expcetreavoir);
+        setContentView(R.layout.expcimg);
 
 
         mImgBank = this.generateQuestions();

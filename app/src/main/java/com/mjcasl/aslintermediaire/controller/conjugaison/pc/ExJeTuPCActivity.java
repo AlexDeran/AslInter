@@ -58,7 +58,7 @@ public class ExJeTuPCActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expcjetu);
+        setContentView(R.layout.expcimg);
 
 
         mImgBank = this.generateQuestions();

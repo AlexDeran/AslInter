@@ -57,7 +57,7 @@ public class Ex1ImparfaitActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eximparfait1);
+        setContentView(R.layout.eximparfaittxt);
 
 
         mQuestionBank = this.generateQuestions();

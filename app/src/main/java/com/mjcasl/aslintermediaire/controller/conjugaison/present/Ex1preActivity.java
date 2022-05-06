@@ -57,7 +57,7 @@ public class Ex1preActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expresent1);
+        setContentView(R.layout.expresenttxt);
 
 
         mQuestionBank = this.generateQuestions();

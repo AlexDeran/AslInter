@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/pps_Question"
+        android:id="@+id/futur_Question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

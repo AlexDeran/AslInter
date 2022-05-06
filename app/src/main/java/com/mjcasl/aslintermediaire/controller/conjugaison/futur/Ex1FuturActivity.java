@@ -29,11 +29,11 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
 
     public static final long COUNTDOWN_IN_MILLIS = 11000;
 
-    private TextView mpcQuestion;
-    private Button mpcAnswer1;
-    private Button mpcAnswer2;
-    private Button mpcAnswer3;
-    private Button mpcAnswer4;
+    private TextView mfuturQuestion;
+    private Button mfuturAnswer1;
+    private Button mfuturAnswer2;
+    private Button mfuturAnswer3;
+    private Button mfuturAnswer4;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
@@ -57,7 +57,7 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expcilelles);
+        setContentView(R.layout.exfuturtxt);
 
 
         mQuestionBank = this.generateQuestions();
@@ -74,26 +74,26 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
 
         mEnableTouchEvents = true;
 
-        mpcQuestion = findViewById(R.id.pc_question_txt);
-        mpcAnswer1 = findViewById(R.id.pc_answer1_btn);
-        mpcAnswer2 = findViewById(R.id.pc_answer2_btn);
-        mpcAnswer3 = findViewById(R.id.pc_answer3_btn);
-        mpcAnswer4 = findViewById(R.id.pc_answer4_btn);
+        mfuturQuestion = findViewById(R.id.futur_question_txt);
+        mfuturAnswer1 = findViewById(R.id.futur_answer1_btn);
+        mfuturAnswer2 = findViewById(R.id.futur_answer2_btn);
+        mfuturAnswer3 = findViewById(R.id.futur_answer3_btn);
+        mfuturAnswer4 = findViewById(R.id.futur_answer4_btn);
 
-        mScoreDisplay = findViewById(R.id.pc_score);
+        mScoreDisplay = findViewById(R.id.futur_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mProgressBar = findViewById(R.id.pc_progress_bar);
+        mProgressBar = findViewById(R.id.futur_progress_bar);
 
         // Use the tag property to 'name' the buttons
-        mpcAnswer1.setTag(0);
-        mpcAnswer2.setTag(1);
-        mpcAnswer3.setTag(2);
-        mpcAnswer4.setTag(3);
+        mfuturAnswer1.setTag(0);
+        mfuturAnswer2.setTag(1);
+        mfuturAnswer3.setTag(2);
+        mfuturAnswer4.setTag(3);
 
-        mpcAnswer1.setOnClickListener(this);
-        mpcAnswer2.setOnClickListener(this);
-        mpcAnswer3.setOnClickListener(this);
-        mpcAnswer4.setOnClickListener(this);
+        mfuturAnswer1.setOnClickListener(this);
+        mfuturAnswer2.setOnClickListener(this);
+        mfuturAnswer3.setOnClickListener(this);
+        mfuturAnswer4.setOnClickListener(this);
 
         mQuestion = mQuestionBank.getQuestion();
         this.displayQuestion(mQuestion);
@@ -118,10 +118,10 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         int responseIndex = (int) v.getTag();
-        int taganswer1 = (int) mpcAnswer1.getTag();
-        int taganswer2 = (int) mpcAnswer2.getTag();
-        int taganswer3 = (int) mpcAnswer3.getTag();
-        int taganswer4 = (int) mpcAnswer4.getTag();
+        int taganswer1 = (int) mfuturAnswer1.getTag();
+        int taganswer2 = (int) mfuturAnswer2.getTag();
+        int taganswer3 = (int) mfuturAnswer3.getTag();
+        int taganswer4 = (int) mfuturAnswer4.getTag();
 
         if(responseIndex == mQuestion.getAnswerIndex()){
                 // Bon
@@ -141,20 +141,20 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
             v.setBackgroundColor(Color.parseColor("#830000"));
 
             if(taganswer1 == mQuestion.getAnswerIndex()){
-                mpcAnswer1.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
             else if(taganswer2 == mQuestion.getAnswerIndex()){
-                mpcAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
+                mfuturAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
             else if(taganswer3 == mQuestion.getAnswerIndex()){
-                mpcAnswer3.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
             else if(taganswer4 == mQuestion.getAnswerIndex()){
-                mpcAnswer4.setBackgroundColor(Color.parseColor("#008000"));
+                mfuturAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
 
@@ -178,10 +178,10 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
 
                     mProgressBar.setProgress(mQuestionCounter);
 
-                    mpcAnswer1.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer2.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer3.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer4.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer1.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer2.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer3.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
         }, 2000);
@@ -211,11 +211,11 @@ public class Ex1FuturActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void displayQuestion(final Question Question) {
-        mpcQuestion.setText(Question.getQuestion());
-        mpcAnswer1.setText(Question.getChoiceList().get(0));
-        mpcAnswer2.setText(Question.getChoiceList().get(1));
-        mpcAnswer3.setText(Question.getChoiceList().get(2));
-        mpcAnswer4.setText(Question.getChoiceList().get(3));
+        mfuturQuestion.setText(Question.getQuestion());
+        mfuturAnswer1.setText(Question.getChoiceList().get(0));
+        mfuturAnswer2.setText(Question.getChoiceList().get(1));
+        mfuturAnswer3.setText(Question.getChoiceList().get(2));
+        mfuturAnswer4.setText(Question.getChoiceList().get(3));
     }
 
     private QuestionBank generateQuestions() {

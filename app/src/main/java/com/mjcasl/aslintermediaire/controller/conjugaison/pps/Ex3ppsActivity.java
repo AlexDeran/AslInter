@@ -58,7 +58,7 @@ public class Ex3ppsActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expps3);
+        setContentView(R.layout.exppsimg);
 
 
         mImgBank = this.generateQuestions();
@@ -75,7 +75,7 @@ public class Ex3ppsActivity extends AppCompatActivity implements View.OnClickLis
 
         mEnableTouchEvents = true;
 
-        mPpsQuestion = findViewById(R.id.Pps_question_txt);
+        mPpsQuestion = findViewById(R.id.pps_question_txt);
         mPpsAnswer1 = findViewById(R.id.pps_answer1_btn);
         mPpsAnswer2 = findViewById(R.id.pps_answer2_btn);
         mPpsAnswer3 = findViewById(R.id.pps_answer3_btn);

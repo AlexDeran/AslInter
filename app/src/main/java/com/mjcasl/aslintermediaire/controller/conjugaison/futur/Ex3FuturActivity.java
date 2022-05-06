@@ -1,4 +1,5 @@
 package com.mjcasl.aslintermediaire.controller.conjugaison.futur;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,7 +10,6 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,28 +20,27 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mjcasl.aslintermediaire.R;
-import com.mjcasl.aslintermediaire.model.ImgBank;
-import com.mjcasl.aslintermediaire.model.ImgQuestion;
+import com.mjcasl.aslintermediaire.model.Question;
+import com.mjcasl.aslintermediaire.model.QuestionBank;
 
 import java.util.Arrays;
 
 public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //public static final long COUNTDOWN_IN_MILLIS = 11000;
+    public static final long COUNTDOWN_IN_MILLIS = 11000;
 
-    private TextView mpcQuestion;
-    private Button mpcAnswer1;
-    private Button mpcAnswer2;
-    private Button mpcAnswer3;
-    private Button mpcAnswer4;
-    private ImageView mImage;
+    private TextView mfuturQuestion;
+    private Button mfuturAnswer1;
+    private Button mfuturAnswer2;
+    private Button mfuturAnswer3;
+    private Button mfuturAnswer4;
 
     private TextView mScoreDisplay;
     private TextView mNbrofQuestion;
     private ProgressBar mProgressBar;
 
-    private ImgBank mImgBank;
-    private ImgQuestion mImgQuestion;
+    private QuestionBank mQuestionBank;
+    private Question mQuestion;
 
     private int mScore;
     private int mNumberOfQuestions;
@@ -58,10 +57,10 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expcnousvous);
+        setContentView(R.layout.exfuturtxt);
 
 
-        mImgBank = this.generateQuestions();
+        mQuestionBank = this.generateQuestions();
         mScore = 0;
         mNumberOfQuestions = 10;
 
@@ -75,30 +74,29 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
 
         mEnableTouchEvents = true;
 
-        mpcQuestion = findViewById(R.id.pc_question_txt);
-        mpcAnswer1 = findViewById(R.id.pc_answer1_btn);
-        mpcAnswer2 = findViewById(R.id.pc_answer2_btn);
-        mpcAnswer3 = findViewById(R.id.pc_answer3_btn);
-        mpcAnswer4 = findViewById(R.id.pc_answer4_btn);
-        mImage = findViewById(R.id.pc_image);
+        mfuturQuestion = findViewById(R.id.futur_question_txt);
+        mfuturAnswer1 = findViewById(R.id.futur_answer1_btn);
+        mfuturAnswer2 = findViewById(R.id.futur_answer2_btn);
+        mfuturAnswer3 = findViewById(R.id.futur_answer3_btn);
+        mfuturAnswer4 = findViewById(R.id.futur_answer4_btn);
 
-        mScoreDisplay = findViewById(R.id.pc_score);
+        mScoreDisplay = findViewById(R.id.futur_score);
         mNbrofQuestion = findViewById(R.id.questions_count);
-        mProgressBar =findViewById(R.id.pc_progress_bar);
+        mProgressBar = findViewById(R.id.futur_progress_bar);
 
         // Use the tag property to 'name' the buttons
-        mpcAnswer1.setTag(0);
-        mpcAnswer2.setTag(1);
-        mpcAnswer3.setTag(2);
-        mpcAnswer4.setTag(3);
+        mfuturAnswer1.setTag(0);
+        mfuturAnswer2.setTag(1);
+        mfuturAnswer3.setTag(2);
+        mfuturAnswer4.setTag(3);
 
-        mpcAnswer1.setOnClickListener(this);
-        mpcAnswer2.setOnClickListener(this);
-        mpcAnswer3.setOnClickListener(this);
-        mpcAnswer4.setOnClickListener(this);
+        mfuturAnswer1.setOnClickListener(this);
+        mfuturAnswer2.setOnClickListener(this);
+        mfuturAnswer3.setOnClickListener(this);
+        mfuturAnswer4.setOnClickListener(this);
 
-        mImgQuestion = mImgBank.getImgQuestion();
-        this.displayQuestion(mImgQuestion);
+        mQuestion = mQuestionBank.getQuestion();
+        this.displayQuestion(mQuestion);
 
         mQuestionTotal = 10;
         mQuestionCounter = 1;
@@ -120,13 +118,13 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         int responseIndex = (int) v.getTag();
-        int taganswer1 = (int) mpcAnswer1.getTag();
-        int taganswer2 = (int) mpcAnswer2.getTag();
-        int taganswer3 = (int) mpcAnswer3.getTag();
-        int taganswer4 = (int) mpcAnswer4.getTag();
+        int taganswer1 = (int) mfuturAnswer1.getTag();
+        int taganswer2 = (int) mfuturAnswer2.getTag();
+        int taganswer3 = (int) mfuturAnswer3.getTag();
+        int taganswer4 = (int) mfuturAnswer4.getTag();
 
-        if(responseIndex == mImgQuestion.getAnswerIndex()){
-                // Bon
+        if(responseIndex == mQuestion.getAnswerIndex()){
+            // Bon
             Toast toast =  Toast.makeText(this, "Correct !", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.BOTTOM,0,100);
             toast.show();
@@ -142,21 +140,21 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
 
             v.setBackgroundColor(Color.parseColor("#830000"));
 
-            if(taganswer1 == mImgQuestion.getAnswerIndex()){
-                mpcAnswer1.setBackgroundColor(Color.parseColor("#008000"));
+            if(taganswer1 == mQuestion.getAnswerIndex()){
+                mfuturAnswer1.setBackgroundColor(Color.parseColor("#008000"));
             }
 
-            else if(taganswer2 == mImgQuestion.getAnswerIndex()){
-                mpcAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
+            else if(taganswer2 == mQuestion.getAnswerIndex()){
+                mfuturAnswer2.setBackgroundColor(Color.parseColor("#008000"));;
             }
 
-            else if(taganswer3 == mImgQuestion.getAnswerIndex()){
-                mpcAnswer3.setBackgroundColor(Color.parseColor("#008000"));
+            else if(taganswer3 == mQuestion.getAnswerIndex()){
+                mfuturAnswer3.setBackgroundColor(Color.parseColor("#008000"));
 
             }
 
-            else if(taganswer4 == mImgQuestion.getAnswerIndex()){
-                mpcAnswer4.setBackgroundColor(Color.parseColor("#008000"));
+            else if(taganswer4 == mQuestion.getAnswerIndex()){
+                mfuturAnswer4.setBackgroundColor(Color.parseColor("#008000"));
             }
         }
 
@@ -171,8 +169,8 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
                     endGame();
                 } else {
 
-                    mImgQuestion = mImgBank.getImgQuestion();
-                    displayQuestion(mImgQuestion);
+                    mQuestion = mQuestionBank.getQuestion();
+                    displayQuestion(mQuestion);
                     mQuestionCounter++;
 
                     mScoreDisplay.setText("Score : " + mScore);
@@ -180,10 +178,10 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
 
                     mProgressBar.setProgress(mQuestionCounter);
 
-                    mpcAnswer1.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer2.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer3.setBackgroundColor(Color.parseColor("#000000"));
-                    mpcAnswer4.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer1.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer2.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer3.setBackgroundColor(Color.parseColor("#000000"));
+                    mfuturAnswer4.setBackgroundColor(Color.parseColor("#000000"));
                 }
             }
         }, 2000);
@@ -197,82 +195,80 @@ public class Ex3FuturActivity extends AppCompatActivity implements View.OnClickL
     private void endGame(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Bien joué !")
-        .setMessage("Votre score est de " + mScore + "/10")
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // End the activity
-                Intent intent = new Intent();
-                intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
-                setResult(RESULT_OK, intent);
-                finish();
-            }
-        })
-        .create()
-        .show();
+                .setMessage("Votre score est de " + mScore + "/10")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // End the activity
+                        Intent intent = new Intent();
+                        intent.putExtra(BUNDLE_EXTRA_SCORE, mScore);
+                        setResult(RESULT_OK, intent);
+                        finish();
+                    }
+                })
+                .create()
+                .show();
     }
 
-    private void displayQuestion(final ImgQuestion imgQuestion) {
-        mpcQuestion.setText(imgQuestion.getImgQuestion());
-        mImage.setImageResource(imgQuestion.getImage());
-        mpcAnswer1.setText(imgQuestion.getChoiceList().get(0));
-        mpcAnswer2.setText(imgQuestion.getChoiceList().get(1));
-        mpcAnswer3.setText(imgQuestion.getChoiceList().get(2));
-        mpcAnswer4.setText(imgQuestion.getChoiceList().get(3));
+    private void displayQuestion(final Question Question) {
+        mfuturQuestion.setText(Question.getQuestion());
+        mfuturAnswer1.setText(Question.getChoiceList().get(0));
+        mfuturAnswer2.setText(Question.getChoiceList().get(1));
+        mfuturAnswer3.setText(Question.getChoiceList().get(2));
+        mfuturAnswer4.setText(Question.getChoiceList().get(3));
     }
 
-    private ImgBank generateQuestions() {
-        ImgQuestion imgQuestion1 = new ImgQuestion("Vous (chercher) vos clés partout.", R.drawable.cles,
-                Arrays.asList("avais cherché", "avez cherché", "êtes cherché", "êtes chercher"),
+    private QuestionBank generateQuestions() {
+        Question Question1 = new Question("Je (sentir) un grand manque après ton départ.",
+                Arrays.asList("sentirais", "sentirai", "sentiras", "sentira"),
                 1);
 
-        ImgQuestion imgQuestion2 = new ImgQuestion("Nous (préparer) nos bagages.",R.drawable.bagages,
-                Arrays.asList("avez préparer", "avons préparé", "sommes préparés", "sommes préparer"),
+        Question Question2 = new Question("Tu (vêtir) cette poupée des habits que tu as cousus.",
+                Arrays.asList("vêtirais", "vêtiras", "vêtira", "vêtirai"),
                 1);
 
-        ImgQuestion imgQuestion3 = new ImgQuestion("Nous (danser) toute la nuit.",R.drawable.dansernuit,
-                Arrays.asList("avez dansé", "sommes dansé", "avons dansé", "êtes dansé"),
+        Question Question3 = new Question("Il (couvrir) le livre avant la rentrée.",
+                Arrays.asList("couvrirai", "couvrira", "couvriras", "couvrirez"),
+                1);
+
+        Question Question4 = new Question("Nous (cueillir) des marguerites dans le champ voisin.",
+                Arrays.asList("cueillera", "cueillerai", "cueillerons", "cueillerez"),
                 2);
 
-        ImgQuestion imgQuestion4 = new ImgQuestion("Vous (balayer) la classe.",R.drawable.balayer,
-                Arrays.asList("avons balayer", "sommes balayé", "avez balayé", "êtes balayé"),
-                2);
-
-        ImgQuestion imgQuestion5 = new ImgQuestion("Nous (préparer) un gâteau.",R.drawable.gateau,
-                Arrays.asList("avez préparer", "avons préparé", "sommes préparé", "êtes préparer"),
-                1);
-
-        ImgQuestion imgQuestion6 = new ImgQuestion("Vous (tricoter) un pull.",R.drawable.tricoter,
-                Arrays.asList("avez tricoté", "avons tricoté", "sommes tricoté", "êtes tricoté"),
+        Question Question5 = new Question("Vous (cuire) les pâtes à feu doux.",
+                Arrays.asList("cuirez ", "cuiras", "cuirons", "cuira"),
                 0);
 
-        ImgQuestion imgQuestion7 = new ImgQuestion("Vous (aller) à la montagne.",R.drawable.montagnevs,
-                Arrays.asList("sommes allés", "avons allé", "êtes allés", "avez allé"),
+        Question Question6 = new Question("Ils (écrire) une lettre de motivation.",
+                Arrays.asList("écrirai", "écriras", "écriront", "écrirez"),
                 2);
 
-        ImgQuestion imgQuestion8 = new ImgQuestion("Vous (aimer) aller au cinéma.",R.drawable.cinema,
-                Arrays.asList("avons aimé", "êtes aimés", "avez aimé", "sommes aimés"),
-                2);
-
-        ImgQuestion imgQuestion9 = new ImgQuestion("Vous (avoir) peur de la sorciére.",R.drawable.sorciere,
-                Arrays.asList("avons eu", "avez eu", "sommes eu", "êtes eu"),
+        Question Question7 = new Question("Vous (rire) plus tard, maintenant il faut réviser.",
+                Arrays.asList("rirons", "rirez", "rira", "rirai"),
                 1);
 
-        ImgQuestion imgQuestion10 = new ImgQuestion("Nous (acheter) un poisson rouge.",R.drawable.poissonrouge,
-                Arrays.asList("sommes acheté", "êtes acheté", "avons acheté", "avez acheté"),
+        Question Question8 = new Question("Nous (dire) la vérité avec simplicité.",
+                Arrays.asList("dirons", "direz", "dira ", "diras"),
+                0);
+
+        Question Question9 = new Question("Il (lire) ce journal demain, tant pis !",
+                Arrays.asList("lirons", "lirez", "lira", "lirai"),
                 2);
 
+        Question Question10 = new Question("Tu (voir) bien ce qui se passera ensuite.",
+                Arrays.asList("verrons", "verras", "verrai", "verrez"),
+                1);
 
-        return new ImgBank(Arrays.asList(imgQuestion1,
-                imgQuestion2,
-                imgQuestion3,
-                imgQuestion4,
-                imgQuestion5,
-                imgQuestion6,
-                imgQuestion7,
-                imgQuestion8,
-                imgQuestion9,
-                imgQuestion10
+        return new QuestionBank(Arrays.asList(Question1,
+                Question2,
+                Question3,
+                Question4,
+                Question5,
+                Question6,
+                Question7,
+                Question8,
+                Question9,
+                Question10
         ));
     }
 }

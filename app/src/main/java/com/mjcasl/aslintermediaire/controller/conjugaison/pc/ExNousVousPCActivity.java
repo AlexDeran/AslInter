@@ -58,7 +58,7 @@ public class ExNousVousPCActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.expcnousvous);
+        setContentView(R.layout.expcimg);
 
 
         mImgBank = this.generateQuestions();

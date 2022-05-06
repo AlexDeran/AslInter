@@ -234,6 +234,15 @@
         </activity>
 
         <activity
+            android:name=".controller.conjugaison.futur.Ex4FuturActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
+        </activity>
+
+
+        <activity
             android:name=".controller.conjugaison.futur.ExFuturEtreAvoirActivity"
             android:screenOrientation="portrait">
             <meta-data
