@@ -46,7 +46,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/librebodonibolditalicxkxq"
-            android:padding="30dp"
+            android:padding="25dp"
             android:text="Exercice 1"
             android:textColor="@color/white"
             android:textSize="40sp" />
@@ -60,7 +60,7 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="@color/black"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:padding="30dp"
+            android:padding="25dp"
             android:text="Exercice 2"
             android:textColor="@color/white"
             android:textSize="40sp" />
@@ -74,7 +74,7 @@
             android:backgroundTint="@color/black"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:padding="30dp"
+            android:padding="25dp"
             android:text="Exercice 3"
             android:textColor="@color/white"
             android:textSize="40sp" />
@@ -88,7 +88,7 @@
             android:backgroundTint="@color/black"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:padding="30dp"
+            android:padding="25dp"
             android:text="Exercice 4"
             android:textColor="@color/white"
             android:textSize="40sp" />
@@ -102,7 +102,7 @@
             android:backgroundTint="@color/black"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
-            android:padding="30dp"
+            android:padding="25dp"
             android:text="Être et Avoir"
             android:textColor="@color/white"
             android:textSize="40sp" />
@@ -116,7 +116,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textSize="40sp"
-            android:padding="30dp"
+            android:padding="25dp"
             android:fontFamily="@font/librebodonibolditalic9aqb"
             android:text="QUIZ FINAL"
             />

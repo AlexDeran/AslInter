@@ -67,7 +67,7 @@ public class FuturmenuActivity extends AppCompatActivity {
             }
         });
 
-       /* mExFuturEtreAvoir.setOnClickListener(new View.OnClickListener() {
+        mExFuturEtreAvoir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent FuturActivityEtreAvoirIntent = new Intent(FuturmenuActivity.this, ExFuturEtreAvoirActivity.class);
@@ -81,6 +81,6 @@ public class FuturmenuActivity extends AppCompatActivity {
                 Intent QFFuturActivityIntent = new Intent(FuturmenuActivity.this, QFFuturActivity.class);
                 startActivity(QFFuturActivityIntent);
             }
-        }); */
+        });
     }
 }

@@ -61,11 +61,9 @@ public class QFImparfaitActivity extends AppCompatActivity implements View.OnCli
     private int mQuestionTotal;
     private int mQuestionCounter;
 
-
     private ColorStateList CountDownColor;
     private CountDownTimer mCountDownTimer;
     private long timeLeftInMillis;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
