@@ -29,7 +29,8 @@
 
         <activity
             android:name=".controller.lecon.pps.LeconPpsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity" />
@@ -37,7 +38,8 @@
 
         <activity
             android:name=".controller.lecon.present.LeconPresentMenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.LeconMenuActivity" />
@@ -45,7 +47,8 @@
 
         <activity
             android:name=".controller.lecon.present.PremierGpeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -53,7 +56,8 @@
 
         <activity
             android:name=".controller.lecon.present.SecondGpeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -61,7 +65,8 @@
 
         <activity
             android:name=".controller.lecon.present.TroisiemeGpeActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -69,7 +74,8 @@
 
         <activity
             android:name=".controller.lecon.present.LeconEtreAvoirActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -77,7 +83,8 @@
 
         <activity
             android:name=".controller.lecon.present.LeconAllerActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -85,7 +92,8 @@
 
         <activity
             android:name=".controller.lecon.present.LeconVenirActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -93,7 +101,8 @@
 
         <activity
             android:name=".controller.lecon.present.LeconDevoirPVActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.lecon.present.LeconPresentMenuActivity" />
@@ -103,6 +112,7 @@
             android:exported="true"
             android:name="com.mjcasl.aslintermediaire.controller.SplashScreenActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -112,7 +122,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.PpsmenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
@@ -120,7 +131,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.Ex2ppsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -129,7 +141,8 @@
 
         <activity
             android:name=".controller.conjugaison.ConjugaisonActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.mjcasl.aslintermediaire.MainActivity" />
@@ -137,15 +150,18 @@
 
         <activity
             android:name=".controller.grammaire.GramActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
 
         <activity
             android:name=".controller.vocabulaire.VocActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
 
         <activity
             android:name=".controller.conjugaison.imparfait.Ex1ImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -154,7 +170,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.ImparfaitMenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
@@ -162,7 +179,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.Ex2ImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -170,7 +188,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.Ex3ImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -178,7 +197,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.Ex4ImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -186,7 +206,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.ExEtreAvoirImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -194,7 +215,8 @@
 
         <activity
             android:name=".controller.conjugaison.imparfait.QFImparfaitActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.imparfait.ImparfaitMenuActivity" />
@@ -202,7 +224,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.Ex1FuturActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -211,7 +234,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.FuturmenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
@@ -219,7 +243,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.Ex2FuturActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -227,7 +252,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.Ex3FuturActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -235,7 +261,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.Ex4FuturActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -244,7 +271,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.ExFuturEtreAvoirActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -252,7 +280,8 @@
 
         <activity
             android:name=".controller.conjugaison.futur.QFFuturActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.futur.FuturmenuActivity" />
@@ -260,7 +289,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.Ex1ppsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -269,7 +299,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.Ex3ppsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -277,7 +308,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.Ex4ppsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -285,7 +317,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.Ex5ppsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -293,7 +326,8 @@
 
         <activity
             android:name=".controller.conjugaison.pps.QFPPSActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pps.PpsmenuActivity" />
@@ -301,7 +335,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.PremenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
@@ -310,7 +345,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.Ex1preActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -318,7 +354,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.Ex2preActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -326,7 +363,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.Ex3preActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -334,7 +372,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.EtreAvoirActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -342,7 +381,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.AllerActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -350,7 +390,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.PresentDevoirPVActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -358,7 +399,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.PresentVenirActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -366,7 +408,8 @@
 
         <activity
             android:name=".controller.conjugaison.present.QFPREActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.present.PremenuActivity" />
@@ -374,7 +417,8 @@
 
         <activity
             android:name=".controller.conjugaison.pc.ExIlEllesPCActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
@@ -383,7 +427,8 @@
 
         <activity
             android:name=".controller.conjugaison.pc.PcmenuActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity" />
@@ -391,7 +436,8 @@
 
         <activity
             android:name=".controller.conjugaison.pc.ExJeTuPCActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
@@ -399,7 +445,8 @@
 
         <activity
             android:name=".controller.conjugaison.pc.ExNousVousPCActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
@@ -407,7 +454,8 @@
 
         <activity
             android:name=".controller.conjugaison.pc.ExEtreAvoirPCActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
@@ -415,10 +463,20 @@
 
         <activity
             android:name=".controller.conjugaison.pc.QFPCActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjcasl.aslintermediaire.controller.conjugaison.pc.PcmenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".controller.AlphabetActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjcasl.aslintermediaire.MainActivity" />
         </activity>
 
     </application>

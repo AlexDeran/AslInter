@@ -24,7 +24,7 @@
       android:layout_marginBottom="100dp"
       android:layout_gravity="center"
       android:adjustViewBounds="true"
-      android:src="@drawable/logo_mjc"/>
+      android:src="@drawable/logo_mjc_grand"/>
 
     <TextView
         android:id="@+id/Title"
@@ -44,7 +44,7 @@
         android:id="@+id/ivSplashLogo"
         android:adjustViewBounds="true"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo_mjc"/>
+        android:src="@drawable/logo_mjc_grand"/>
 
     </LinearLayout>
 

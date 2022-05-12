@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mjcasl.aslintermediaire.controller.AlphabetActivity;
 import com.mjcasl.aslintermediaire.controller.conjugaison.ConjugaisonActivity;
 import com.mjcasl.aslintermediaire.controller.grammaire.GramActivity;
 import com.mjcasl.aslintermediaire.controller.vocabulaire.VocActivity;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mConjugaison;
    // private Button mGram;
     private Button mLecon;
-   // private Button mVoc;
+   private Button mAlphabet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mConjugaison = findViewById(R.id.conjugaison_btn);
         //mGram = findViewById(R.id.gram_btn);
         mLecon = findViewById(R.id.leçon_btn);
-        //mVoc = findViewById(R.id.voc_btn);
+        mAlphabet = findViewById(R.id.alphabet_btn);
 
 
         mConjugaison.setOnClickListener(new View.OnClickListener() {
@@ -50,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       /* mVoc.setOnClickListener(new View.OnClickListener() {
+        mAlphabet.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View v) {
-               Intent VocActivityIntent = new Intent(MainActivity.this, VocActivity.class);
-                startActivity(VocActivityIntent);
+               Intent AlphaActivityIntent = new Intent(MainActivity.this, AlphabetActivity.class);
+                startActivity(AlphaActivityIntent);
             }
-        });*/
+        });
     }
 }
